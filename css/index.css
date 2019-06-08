@@ -11,3 +11,51 @@
 footer {
   color: #6c757d;
 }
+
+/* So that .header-text can be positioned absolutely to this parent element */
+header {
+  position: relative;
+}
+
+.header-overlay {
+  position: absolute;
+
+  top: 0%;
+  height: 100%;
+
+  left: 0%;
+  width: 100%;
+  
+  display: flex;
+  flex-direction: row;
+}
+
+.header-overlay-text {
+  background: rgba(245, 245, 245, 0.685);
+  border-radius: 2px;
+  padding: 0.5rem;
+}
+
+#hand {
+  animation-name: wave;
+  animation-duration: 2s;
+  animation-iteration-count: 3;
+}
+
+@keyframes wave {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(5deg);
+  }
+  50% {
+    transform: rotate(-5deg);
+  }
+  75% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
