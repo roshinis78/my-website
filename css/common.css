@@ -1,3 +1,57 @@
 footer {
   color: #6c757d;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+
+  padding: 1%;
+  margin-top: 2%;
+  height: auto;
+}
+
+/* Bootstrap social doesn't have settings for gitlab, so I followed their formatting and made my own */
+.btn-gitlab {
+  color: #fff;
+  background-color: #de7e00;
+  border-color: rgba(0, 0, 0, 0.2)
+}
+
+.btn-gitlab:focus, .btn-gitlab.focus {
+  color: #fff;
+  background-color: #c06d00;
+  border-color: rgba(0, 0, 0, 0.2)
+}
+
+.btn-gitlab:hover {
+  color: #fff;
+  background-color: #c06d00;
+  border-color: rgba(0, 0, 0, 0.2)
+}
+
+.btn-gitlab:active, .btn-gitlab.active, .open>.dropdown-toggle.btn-gitlab {
+  color: #fff;
+  background-color: #c06d00;
+  border-color: rgba(0, 0, 0, 0.2)
+}
+
+.btn-gitlab:active:hover, .btn-gitlab.active:hover, .open>.dropdown-toggle.btn-gitlab:hover, .btn-gitlab:active:focus, .btn-gitlab.active:focus, .open>.dropdown-toggle.btn-gitlab:focus, .btn-gitlab:active.focus, .btn-gitlab.active.focus, .open>.dropdown-toggle.btn-gitlab.focus {
+  color: #fff;
+  background-color: #af6300;
+  border-color: rgba(0, 0, 0, 0.2)
+}
+
+.btn-gitlab:active, .btn-gitlab.active, .open>.dropdown-toggle.btn-gitlab {
+  background-image: none
+}
+
+.btn-gitlab.disabled:hover, .btn-gitlab[disabled]:hover, fieldset[disabled] .btn-gitlab:hover, .btn-gitlab.disabled:focus, .btn-gitlab[disabled]:focus, fieldset[disabled] .btn-gitlab:focus, .btn-gitlab.disabled.focus, .btn-gitlab[disabled].focus, fieldset[disabled] .btn-gitlab.focus {
+  background-color: #de7e00;
+  border-color: rgba(0, 0, 0, 0.2)
+}
+
+.btn-gitlab .badge {
+  color: #de7e00;
+  background-color: #fff
 }
