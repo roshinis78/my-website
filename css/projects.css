@@ -1,0 +1,5 @@
+/* Custom orange badge since Bootstrap doesn't have one */ 
+.badge-orange {
+  color: #fff;
+  background-color: #fd7e14;
+}
