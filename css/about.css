@@ -2,3 +2,8 @@ img {
   max-width: 300px;
   max-height: 300px;
 }
+
+.content {
+  padding-left: 15%;
+  padding-right: 15%;
+}
