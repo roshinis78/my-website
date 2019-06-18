@@ -3,3 +3,8 @@
   color: #fff;
   background-color: #fd7e14;
 }
+
+.carousel img {
+  width: 250px;
+  height: auto;
+}
