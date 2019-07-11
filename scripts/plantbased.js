@@ -11,11 +11,11 @@ $(function () {
 
 var visualizePlantbased = function (data) {
     // Boilerplate:
-    var margin = { top: 30, right: 30, bottom: 30, left: 30 }
+    var margin = { top: 30, right: 30, bottom: 0, left: 20 }
 
     var width = 1150 - margin.left - margin.right
 
-    var height = 600 - margin.top - margin.bottom
+    var height = 570 - margin.top - margin.bottom
 
     var svg = d3
         .select('#plantbased-chart')
@@ -153,7 +153,7 @@ var visualizePlantbased = function (data) {
     svg
         .append('text')
         .attr('x', 0)
-        .attr('y', height - margin.bottom)
+        .attr('y', height - 50)
         .html('* Excluding Alaska, Hawaii & Puerto Rico -- will be added later.')
         .style('font', '15px calibri')
         .style('fill', '#BF360C')

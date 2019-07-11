@@ -66,7 +66,7 @@
             <span class='badge badge-light'>VGA</span>
             <span class='badge badge-light'>USB Keyboard</span>
             <span class='badge badge-light'>On-Chip Memory</span>
-            <span class='badge badge-light'>AES Encryption & Decryption</span>
+            <span class='badge badge-light'>AES Decryption</span>
             <span class='badge badge-light'>Logic Design</span>
           </div>
         </div>
@@ -85,13 +85,16 @@
             <span class='badge badge-light'>D3.js</span>
             <span class='badge badge-light'>pandas</span>
             <span class='badge badge-light'>Python</span>
+            <span class='badge badge-light'>HTML</span>
             <span class='badge badge-light'>JavaScript</span>
             <span class='badge badge-light'>GeoJSON</span>
             <span class='badge badge-light'>Bootstrap</span>
             <span class='badge badge-light'>UIUC Major Distributions</span>
+            <span class='badge badge-light'>CSS</span>
             <span class='badge badge-light'>Plant-based Dining</span>
-            <span class='badge badge-light'>Jupyter Notebook</span>
             <span class='badge badge-light'>Node.js</span>
+            <span class='badge badge-light'>Jupyter Notebook</span>
+            <span class='badge badge-light'>Produce Flow</span>
           </div>
         </div>
       </div>
@@ -108,6 +111,7 @@
             <span class='badge badge-warning text-white'>I'm a TA for this class!</span>
             <span class='badge badge-light'>x86 Assembly</span>
             <span class='badge badge-light'>C</span>
+            <span class='badge badge-light'>Data Structures</span>
             <span class='badge badge-light'>Interrupt Handling</span>
             <span class='badge badge-light'>File System</span>
             <span class='badge badge-light'>System Calls</span>
@@ -141,6 +145,7 @@
             <span class='badge badge-light'>D3.js</span>
             <span class='badge badge-light'>Data Visualization</span>
             <span class='badge badge-light'>My Personal Website</span>
+            <span class='badge badge-light'>Produce Flow</span>
           </div>
         </div>
       </div>
@@ -151,7 +156,7 @@
 
     <!-- Actual project descriptions -->
     <div id='fpga-projects'>
-      <header class='jumbotron bg-dark text-white p-2'>
+      <header class='jumbotron bg-dark text-white p-2 mb-2'>
         <h3>FPGA</h3>
 
         <div>
@@ -165,7 +170,7 @@
           <span class='badge badge-light'>VGA</span>
           <span class='badge badge-light'>USB Keyboard</span>
           <span class='badge badge-light'>On-Chip Memory</span>
-          <span class='badge badge-light'>AES Decryption</span>
+          <span class='badge badge-light'>AES</span>
           <span class='badge badge-light'>Logic Design</span>
         </div>
 
@@ -232,7 +237,7 @@
     <hr id='line-before-data-viz'>
 
     <div id='data-viz-projects'>
-      <header class='jumbotron bg-dark text-white p-2'>
+      <header class='jumbotron bg-dark text-white p-2 mb-2'>
         <h3>Data Visualization</h3>
 
         <div>
@@ -243,10 +248,10 @@
           <span class='badge badge-light'>JavaScript</span>
           <span class='badge badge-light'>GeoJSON</span>
           <span class='badge badge-light'>Bootstrap</span>
-          <span class='badge badge-light'>UIUC Major Distributions</span>
-          <span class='badge badge-light'>Plant-based Dining</span>
           <span class='badge badge-light'>Jupyter Notebook</span>
           <span class='badge badge-light'>Node.js</span>
+          <span class='badge badge-light'>HTML</span>
+          <span class='badge badge-light'>CSS</span>
         </div>
 
         <div>
@@ -258,13 +263,13 @@
 
       <div id='data-viz-produce-flow'>
         <h4>Produce Flow (Summer 2019)</h4>
-        <a href='https://roshinis78.github.io/produce-flow/' target='_blank'>View this project <i
-            class='fa fa-lg fa-globe'></i></a>
         <p>
           Produce Flow refers to the global flow of produce across countries and regions and how these flows may expose
-          unsustainable growing or unethical labor practices. This interactive learning experience involves a series of
-          visualizations designed and programmed by me, and inspired by Rajesh Mohan. <a
-            href='https://roshinis78.github.io/produce-flow/' target='_blank'>Visit the website to learn more!</a>
+          unsustainable growing or unethical labor practices. This interactive learning experience uses datasets from
+          the Food & Agriculture Organization to create a series of original visualizations designed by me and inspired
+          by Rajesh Mohan.
+          <a href='https://roshinis78.github.io/produce-flow/' target='_blank'>Visit the project website to learn more!
+            <i class='fa fa-lg fa-globe'></i></a>
         </p>
       </div>
 
@@ -272,9 +277,6 @@
         <h4>Plant-based Dining (Spring 2019)</h4>
         <a href='https://github.com/roshinis78/plantbased-dining' target='_blank'>View this project on GitHub <i
             class='fa fa-lg fa-github'></i></a>
-        <div class='visualization' id='plantbased-chart'>
-          <!-- The actual visualization will be loaded here -->
-        </div>
         <p>
           With my recent endeavour to move towards a plantbased lifestyle, I decided to create a visualization that
           would help new vegetarians and vegans find dining locations across the U.S. in their ideal price range and in
@@ -282,15 +284,15 @@
           featuring custom tooltips that display further restaurant information (price range, city, cuisines) and and an
           easy-to-read legend to help users find restaurants in any price range.
         </p>
+        <div class='visualization mb-3' id='plantbased-chart'>
+          <!-- The actual visualization will be loaded here -->
+        </div>
       </div>
 
       <div id='data-viz-uiuc-majors'>
         <h4>UIUC Undergraduate Major Distribution (Spring 2019)</h4>
         <a href='https://github.com/roshinis78/uiuc-majors' target='_blank'>View this project on GitHub <i
             class='fa fa-lg fa-github'></i></a>
-        <div class='visualization' id='majors-chart'>
-          <!-- The actual visualization will be loaded here -->
-        </div>
         <p>
           In this project, my team and I used pandas to clean and organize a UIUC dataset that contained enrollment
           statistics for all majors on campus. We chose to focus on how the undergraduate enrollments for each major and
@@ -299,19 +301,23 @@
           designed custom tooltips for each slope line that display the major's name and the overall change in
           enrollment counts for in-state, out-of-state, and international students with this major.
         </p>
+        <div class='visualization' id='majors-chart'>
+          <!-- The actual visualization will be loaded here -->
+        </div>
       </div>
     </div>
 
     <hr id='line-before-os'>
 
     <div id='os-projects'>
-      <header class='jumbotron bg-dark text-white p-2'>
+      <header class='jumbotron bg-dark text-white p-2 mb-2'>
         <h3>Operating Systems</h3>
 
         <div>
           <strong>Relevant Skills:</strong>
           <span class='badge badge-light'>x86 Assembly</span>
           <span class='badge badge-light'>C</span>
+          <span class='badge badge-light'>Data Structures</span>
           <span class='badge badge-light'>Interrupt Handling</span>
           <span class='badge badge-light'>File System</span>
           <span class='badge badge-light'>System Calls</span>
@@ -342,11 +348,11 @@
     <hr id='line-before-web-dev'>
 
     <div id='web-dev-projects'>
-      <header class='jumbotron bg-dark text-white p-2'>
+      <header class='jumbotron bg-dark text-white p-2 mb-2'>
         <h3>Web Development</h3>
 
         <div>
-          <strong>Relevant Skills</strong>
+          <strong>Relevant Skills:</strong>
           <span class='badge badge-light'>JavaScript</span>
           <span class='badge badge-light'>HTML</span>
           <span class='badge badge-light'>CSS</span>
@@ -367,11 +373,22 @@
       </header>
 
       <div id='web-dev-produce-flow'>
-        Produce Flow
+        <h4>Produce Flow (Summer 2019)</h4>
+        <p>
+          Produce Flow refers to the global flow of produce across countries and regions and how these flows may expose
+          unsustainable growing or unethical labor practices. This interactive learning experience uses datasets from
+          the Food & Agriculture Organization to create a series of original visualizations designed by me and inspired
+          by Rajesh Mohan.
+          <a href='https://roshinis78.github.io/produce-flow/' target='_blank'>Visit the project website to learn more!
+            <i class='fa fa-lg fa-globe'></i></a>
+        </p>
       </div>
 
       <div id='web-dev-personal-website'>
-        Personal Website
+        <h4>Personal Website (Summer 2019)</h4>
+        <a href='https://github.com/roshinis78/my-website' target='_blank'>View this project on GitHub <i
+            class='fa fa-lg fa-github'></i></a>
+        <p>This website was designed 100% from scratch! 🌻🎨🖌️ No templates, no themes. Just my imagination. 🌈</p>
       </div>
     </div>
 
