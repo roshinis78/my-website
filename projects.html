@@ -16,11 +16,14 @@
   <link rel='stylesheet' href='https://unpkg.com/bootstrap-social@5.1.1/bootstrap-social.css'>
 
   <!-- My custom styles -->
-  <link rel='stylesheet' href='css/common.css'>
-  <link rel='stylesheet' href='css/projects.css'>
+  <link rel='stylesheet' href='styles/common.css'>
+  <link rel='stylesheet' href='styles/projects.css'>
 </head>
 
 <body>
+  <a class='text-info back-to-top' href='#'>
+    <i class='fa fa-3x fa-arrow-circle-o-up'></i>
+  </a>
   <navbar class='navbar navbar-light navbar-expand-md fixed-top bg-light'>
     <div class='container'>
       <button class='navbar-toggler mr-3' data-toggle='collapse' data-target='#navigation-links'>
@@ -49,7 +52,7 @@
           <div class='card-header'>
             <div class='d-flex flex-wrap'>
               <h5 class='col-auto col-lg-12 pl-1 pr-0'>FPGA</h5>
-              <a class='card-link col col-lg-12 pl-1 pr-0' href='#fpga-projects'>View Projects</a>
+              <a class='card-link col col-lg-12 pl-1 pr-0' href='#line-before-fpga'>View Projects</a>
             </div>
           </div>
           <div class='card-body'>
@@ -74,7 +77,7 @@
           <div class='card-header'>
             <div class='d-flex flex-wrap'>
               <h5 class='col-auto col-lg-12 pl-1 pr-0'>Data Visualization</h5>
-              <a class='card-link col col-lg-12 pl-1 pr-0' href='#data-viz-projects'>View Projects</a>
+              <a class='card-link col col-lg-12 pl-1 pr-0' href='#line-before-data-viz'>View Projects</a>
             </div>
           </div>
           <div class='card-body'>
@@ -98,7 +101,7 @@
           <div class='card-header'>
             <div class='d-flex flex-wrap'>
               <h5 class='col-auto col-lg-12 pl-1 pr-0'>Operating Systems</h5>
-              <a class='card-link col col-lg-12 pl-1 pr-0' href='#os-projects'>View Projects</a>
+              <a class='card-link col col-lg-12 pl-1 pr-0' href='#line-before-os'>View Projects</a>
             </div>
           </div>
           <div class='card-body'>
@@ -123,7 +126,7 @@
           <div class='card-header'>
             <div class='d-flex flex-wrap'>
               <h5 class='col-auto col-lg-12 pl-1 pr-0'>Web Development</h5>
-              <a class='card-link col col-lg-12 pl-1 pr-0' href='#web-dev-projects'>View Projects</a>
+              <a class='card-link col col-lg-12 pl-1 pr-0' href='#line-before-web-dev'>View Projects</a>
             </div>
           </div>
           <div class='card-body'>
@@ -144,39 +147,41 @@
 
     </div>
 
-    <hr>
+    <hr id='line-before-fpga'>
 
     <!-- Actual project descriptions -->
     <div id='fpga-projects'>
-      <h3>FPGA</h3>
+      <header class='jumbotron bg-dark text-white p-2'>
+        <h3>FPGA</h3>
 
-      <div>
-        <strong>Relevant Skills:</strong>
-        <span class='badge badge-light'>FPGA</span>
-        <span class='badge badge-light'>SystemVerilog</span>
-        <span class='badge badge-light'>Quartus Prime</span>
-        <span class='badge badge-light'>ModelSim</span>
-        <span class='badge badge-light'>Testbench</span>
-        <span class='badge badge-light'>Game Design</span>
-        <span class='badge badge-light'>VGA</span>
-        <span class='badge badge-light'>USB Keyboard</span>
-        <span class='badge badge-light'>On-Chip Memory</span>
-        <span class='badge badge-light'>AES Encryption & Decryption</span>
-        <span class='badge badge-light'>Logic Design</span>
-      </div>
+        <div>
+          <strong>Relevant Skills:</strong>
+          <span class='badge badge-light'>FPGA</span>
+          <span class='badge badge-light'>SystemVerilog</span>
+          <span class='badge badge-light'>Quartus Prime</span>
+          <span class='badge badge-light'>ModelSim</span>
+          <span class='badge badge-light'>Testbench</span>
+          <span class='badge badge-light'>Game Design</span>
+          <span class='badge badge-light'>VGA</span>
+          <span class='badge badge-light'>USB Keyboard</span>
+          <span class='badge badge-light'>On-Chip Memory</span>
+          <span class='badge badge-light'>AES Decryption</span>
+          <span class='badge badge-light'>Logic Design</span>
+        </div>
 
-      <div>
-        <strong>Relevant Coursework:</strong>
-        <span class='badge badge-info'>Digital Systems Laboratory (ECE 385)</span>
-        <span class='badge badge-info'>Introduction to Computing (ECE 120)</span>
-      </div>
-
-      <div id='fpga-aes'>
-        AES Decryption project
-      </div>
+        <div>
+          <strong>Relevant Coursework:</strong>
+          <span class='badge badge-info'>Digital Systems Laboratory (ECE 385)</span>
+          <span class='badge badge-info'>Introduction to Computing (ECE 120)</span>
+        </div>
+      </header>
 
       <div id='fpga-crazy-taxi'>
         <h4>Crazy Taxi (Spring 2019)</h4>
+        <a href='https://github.com/roshinis78/crazy-taxi-info' target='_blank'>View this project on GitHub <i
+            class='fa fa-lg fa-github'></i></a>
+        <br>
+        <img class='project-image' src='images/crazy-taxi-gameplay.PNG' alt='Crazy Taxi gameplay'>
 
         <p>Inspired by <a href='https://www.coolmathgames.com/0-crazy-taxi-m12' target='_blank'>Crazy Taxi</a> at
           <a href='https://www.coolmathgames.com/' target='_blank'>coolmathgames.com</a>.
@@ -188,167 +193,186 @@
           worry if you don’t have access to these devices. I have pictures!
         </p>
 
-        <div class='media'></div>
+        <p>
+          Our game, which is written entirely in SystemVerilog and C, utilizes the VGA monitor for display and the USB
+          keyboard for user controls (WASD and the four directional arrows to support multiplayer). The main gameplay
+          consists of two user-driven cars (Red and Purple) that dodge randomly generated traffic cones on a highway
+          scene by jumping and switching lanes. If a car collides with a traffic cone, the other player automatically
+          wins. Throughout the game, we also dynamically display the distance traveled by each car on the top of the
+          screen.
+        </p>
 
+        <p>
+          All sprites used in the game are my original custom designs. To reduce our On-Chip Memory usage, we have
+          written a Python script to map the colors used in our sprites to palettes so that our sprites only use 1 to
+          4 bits per pixel (1 bit in the case of text sprites). We have also implemented full collision handling which
+          ensures that the cars cannot collide with each other or the road boundaries. In addition, we have
+          implemented game scrolling so that the highway scrolls vertically as the players drive, which can be
+          observed as the trees alongside the road scroll with world. To randomly generate the cone obstacles, we used
+          a 3-bit Linear Feedback Shift Register (LSFR), where each bit corresponds to the state of a cone’s existence
+          in each of the three lanes. Since we wrote modules to implement custom drawing routines for each sprite, we
+          can easily remove sprites from the screen as well as detect collisions through the coordinates at which a
+          sprite is being drawn.
+        </p>
+
+        <p>
+          Our game is controlled by a finite state machine with 5 states that represent: the start screen of the game,
+          the custom transition that I have programmed to move the cars to their starting positions for the race, the
+          game itself, the results screen which displays which player won, and the ending screen with the end game
+          credits. Pictures of each of these states can be found below.
+        </p>
+
+        <p>
+          If you would like to discuss this project or the implementation, feel free to contact me! I have invested a
+          lot in this game and would love feedback on it! 😄
+        </p>
       </div>
-      <div class='carousel slide' data-ride='carousel' id='crazy-taxi-carousel'>
-        <div class='carousel inner'>
-          <img class='carousel-item active' src='images/crazy-taxi/start-screen.jpg'>
-          <img class='carousel-item' src='images/crazy-taxi/game-start.jpg'>
-          <img class='carousel-item' src='images/crazy-taxi/game-play.jpg'>
-          <img class='carousel-item' src='images/crazy-taxi/p1-wins.jpg'>
-          <img class='carousel-item' src='images/crazy-taxi/end.jpg'>
-          <img class='carousel-item' src='images/crazy-taxi/block-diagram.png'>
+    </div>
+
+    <hr id='line-before-data-viz'>
+
+    <div id='data-viz-projects'>
+      <header class='jumbotron bg-dark text-white p-2'>
+        <h3>Data Visualization</h3>
+
+        <div>
+          <strong>Relevant Skills:</strong>
+          <span class='badge badge-light'>D3.js</span>
+          <span class='badge badge-light'>pandas</span>
+          <span class='badge badge-light'>Python</span>
+          <span class='badge badge-light'>JavaScript</span>
+          <span class='badge badge-light'>GeoJSON</span>
+          <span class='badge badge-light'>Bootstrap</span>
+          <span class='badge badge-light'>UIUC Major Distributions</span>
+          <span class='badge badge-light'>Plant-based Dining</span>
+          <span class='badge badge-light'>Jupyter Notebook</span>
+          <span class='badge badge-light'>Node.js</span>
         </div>
 
-        <!-- Carousel controls -->
-        <a class='carousel-control-next bg-black' data-slide='next' href='#crazy-taxi-carousel'>
-          <span class='carousel-control-next-icon'></span>
-        </a>
-        <a class='carousel-control-prev' data-slide='prev' href='#crazy-taxi-carousel'>
-          <span class='carousel-control-prev-icon'></span>
-        </a>
+        <div>
+          <strong>Relevant Coursework:</strong>
+          <span class='badge badge-success'>Data Structures (CS 225)</span>
+          <span class='badge badge-success'>Data Science (CS 225 Honors)</span>
+        </div>
+      </header>
+
+      <div id='data-viz-produce-flow'>
+        <h4>Produce Flow (Summer 2019)</h4>
+        <a href='https://roshinis78.github.io/produce-flow/' target='_blank'>View this project <i
+            class='fa fa-lg fa-globe'></i></a>
+        <p>
+          Produce Flow refers to the global flow of produce across countries and regions and how these flows may expose
+          unsustainable growing or unethical labor practices. This interactive learning experience involves a series of
+          visualizations designed and programmed by me, and inspired by Rajesh Mohan. <a
+            href='https://roshinis78.github.io/produce-flow/' target='_blank'>Visit the website to learn more!</a>
+        </p>
       </div>
 
-      <p>
-        Our game, which is written entirely in SystemVerilog and C, utilizes the VGA monitor for display and the USB
-        keyboard for user controls (WASD and the four directional arrows to support multiplayer). The main gameplay
-        consists of two user-driven cars (Red and Purple) that dodge randomly generated traffic cones on a highway
-        scene by jumping and switching lanes. If a car collides with a traffic cone, the other player automatically
-        wins. Throughout the game, we also dynamically display the distance traveled by each car on the top of the
-        screen.
-      </p>
+      <div id='data-viz-plantbased-dining'>
+        <h4>Plant-based Dining (Spring 2019)</h4>
+        <a href='https://github.com/roshinis78/plantbased-dining' target='_blank'>View this project on GitHub <i
+            class='fa fa-lg fa-github'></i></a>
+        <br>
+        <img class='project-image' src='images/plantbased-dining.png'
+          alt='Plantbased dining in the United States, map visualization'>
+        <p>
+          With my recent endeavour to move towards a plantbased lifestyle, I decided to create a visualization that
+          would help new vegetarians and vegans find dining locations across the U.S. in their ideal price range and in
+          a variety of cuisines. My team and I created this learning experience by designing a U.S. map visualization
+          featuring custom tooltips that display further restaurant information (price range, city, cuisines) and and an
+          easy-to-read legend to help users find restaurants in any price range.
+        </p>
+      </div>
 
-      <p>
-        All sprites used in the game are my original custom designs. To reduce our On-Chip Memory usage, we have
-        written a Python script to map the colors used in our sprites to palettes so that our sprites only use 1 to
-        4 bits per pixel (1 bit in the case of text sprites). We have also implemented full collision handling which
-        ensures that the cars cannot collide with each other or the road boundaries. In addition, we have
-        implemented game scrolling so that the highway scrolls vertically as the players drive, which can be
-        observed as the trees alongside the road scroll with world. To randomly generate the cone obstacles, we used
-        a 3-bit Linear Feedback Shift Register (LSFR), where each bit corresponds to the state of a cone’s existence
-        in each of the three lanes. Since we wrote modules to implement custom drawing routines for each sprite, we
-        can easily remove sprites from the screen as well as detect collisions through the coordinates at which a
-        sprite is being drawn.
-      </p>
-
-      <p>
-        Our game is controlled by a finite state machine with 5 states that represent: the start screen of the game,
-        the custom transition that I have programmed to move the cars to their starting positions for the race, the
-        game itself, the results screen which displays which player won, and the ending screen with the end game
-        credits. Pictures of each of these states can be found below.
-      </p>
-
-      <p>
-        If you would like to discuss this project or the implementation, feel free to contact me! I have invested a
-        lot in this game and would love feedback on it 😄
-      </p>
+      <div id='data-viz-uiuc-majors'>
+        <h4>UIUC Undergraduate Major Distribution (Spring 2019)</h4>
+        <a href='https://github.com/roshinis78/uiuc-majors' target='_blank'>View this project on GitHub <i
+            class='fa fa-lg fa-github'></i></a>
+        <br>
+        <img class='project-image' src='images/uiuc-majors.png' alt='UIUC undergraduate major distribution slope graph'>
+        <p>
+          In this project, my team and I used pandas to clean and organize a UIUC dataset that contained enrollment
+          statistics for all majors on campus. We chose to focus on how the undergraduate enrollments for each major and
+          each college have changed over the past 14 years. To do this, we used D3.js and JavaScript to create a slope
+          graph to display the growth and fall of the number of undergraduate students enrolled for each major. I
+          designed custom tooltips for each slope line that display the major's name and the overall change in
+          enrollment counts for in-state, out-of-state, and international students with this major.
+        </p>
+      </div>
     </div>
 
-  </div>
+    <hr id='line-before-os'>
 
-  <hr>
+    <div id='os-projects'>
+      <header class='jumbotron bg-dark text-white p-2'>
+        <h3>Operating Systems</h3>
 
-  <div id='data-viz-projects'>
-    <h3>Data Visualization</h3>
+        <div>
+          <strong>Relevant Skills:</strong>
+          <span class='badge badge-light'>x86 Assembly</span>
+          <span class='badge badge-light'>C</span>
+          <span class='badge badge-light'>Interrupt Handling</span>
+          <span class='badge badge-light'>File System</span>
+          <span class='badge badge-light'>System Calls</span>
+          <span class='badge badge-light'>Paging</span>
+          <span class='badge badge-light'>PCB</span>
+          <span class='badge badge-light'>Synchronization</span>
+          <span class='badge badge-light'>Device Drivers</span>
+          <span class='badge badge-light'>Context Switching</span>
+          <span class='badge badge-light'>VGA</span>
+        </div>
 
-    <div>
-      <strong>Relevant Skills:</strong>
-      <span class='badge badge-light'>D3.js</span>
-      <span class='badge badge-light'>pandas</span>
-      <span class='badge badge-light'>Python</span>
-      <span class='badge badge-light'>JavaScript</span>
-      <span class='badge badge-light'>GeoJSON</span>
-      <span class='badge badge-light'>Bootstrap</span>
-      <span class='badge badge-light'>UIUC Major Distributions</span>
-      <span class='badge badge-light'>Plant-based Dining</span>
-      <span class='badge badge-light'>Jupyter Notebook</span>
-      <span class='badge badge-light'>Node.js</span>
+        <div>
+          <strong>Relevant Coursework:</strong>
+          <span class='badge badge-warning text-white'>Computer Systems Engineering (ECE 391)</span>
+          <span class='badge badge-warning text-white'>Computer Systems & Programming (ECE 220)</span>
+        </div>
+      </header>
+
+      <div>
+        I'm a TA for this class! Read more about my work <a href='hire.html'>here</a>
+      </div>
+
+      <div id='os-panic-at-the-kernel'>
+        Panic at the Kernel OS
+      </div>
     </div>
 
-    <div>
-      <strong>Relevant Coursework:</strong>
-      <span class='badge badge-success'>Data Structures (CS 225)</span>
-      <span class='badge badge-success'>Data Science (CS 225 Honors)</span>
+    <hr id='line-before-web-dev'>
+
+    <div id='web-dev-projects'>
+      <header class='jumbotron bg-dark text-white p-2'>
+        <h3>Web Development</h3>
+
+        <div>
+          <strong>Relevant Skills</strong>
+          <span class='badge badge-light'>JavaScript</span>
+          <span class='badge badge-light'>HTML</span>
+          <span class='badge badge-light'>CSS</span>
+          <span class='badge badge-light'>Node.js</span>
+          <span class='badge badge-light'>Bootstrap</span>
+          <span class='badge badge-light'>jQuery</span>
+          <span class='badge badge-light'>React.js</span>
+          <span class='badge badge-light'>D3.js</span>
+          <span class='badge badge-light'>Data Visualization</span>
+          <span class='badge badge-light'>My Personal Website</span>
+        </div>
+
+        <div>
+          <strong>Relevant Coursework:</strong>
+          <span class='badge badge-orange'>Front-End Web UI Frameworks and Tools (Coursera)</span>
+          <span class='badge badge-orange'>Data Science (CS 225 Honors)</span>
+        </div>
+      </header>
+
+      <div id='web-dev-produce-flow'>
+        Produce Flow
+      </div>
+
+      <div id='web-dev-personal-website'>
+        Personal Website
+      </div>
     </div>
-
-    <div id='data-viz-uiuc-majors'>
-      UIUC Major Distribution
-    </div>
-
-    <div id='data-viz-plantbased-dining'>
-      Plant-based Dining
-    </div>
-  </div>
-
-  <hr>
-
-  <div id='os-projects'>
-    <h3>Operating Systems</h3>
-
-    <div>
-      <strong>Relevant Skills:</strong>
-      <span class='badge badge-light'>x86 Assembly</span>
-      <span class='badge badge-light'>C</span>
-      <span class='badge badge-light'>Interrupt Handling</span>
-      <span class='badge badge-light'>File System</span>
-      <span class='badge badge-light'>System Calls</span>
-      <span class='badge badge-light'>Paging</span>
-      <span class='badge badge-light'>PCB</span>
-      <span class='badge badge-light'>Synchronization</span>
-      <span class='badge badge-light'>Device Drivers</span>
-      <span class='badge badge-light'>Context Switching</span>
-      <span class='badge badge-light'>VGA</span>
-    </div>
-
-    <div>
-      <strong>Relevant Coursework:</strong>
-      <span class='badge badge-warning text-white'>Computer Systems Engineering (ECE 391)</span>
-      <span class='badge badge-warning text-white'>Computer Systems & Programming (ECE 220)</span>
-    </div>
-
-    <div>
-      I'm a TA for this class! Read more about my work <a href='hire.html'>here</a>
-    </div>
-
-    <div id='os-panic-at-the-kernel'>
-      Panic at the Kernel OS
-    </div>
-  </div>
-
-  <hr>
-
-  <div id='web-dev-projects'>
-    <h3>Web Development</h3>
-
-    <div>
-      <strong>Relevant Skills</strong>
-      <span class='badge badge-light'>JavaScript</span>
-      <span class='badge badge-light'>HTML</span>
-      <span class='badge badge-light'>CSS</span>
-      <span class='badge badge-light'>Node.js</span>
-      <span class='badge badge-light'>Bootstrap</span>
-      <span class='badge badge-light'>jQuery</span>
-      <span class='badge badge-light'>React.js</span>
-      <span class='badge badge-light'>D3.js</span>
-      <span class='badge badge-light'>Data Visualization</span>
-      <span class='badge badge-light'>My Personal Website</span>
-    </div>
-
-    <div>
-      <strong>Relevant Coursework:</strong>
-      <span class='badge badge-orange'>Front-End Web UI Frameworks and Tools (Coursera)</span>
-      <span class='badge badge-orange'>Data Science (CS 225 Honors)</span>
-    </div>
-
-    <div id='web-dev-produce-flow'>
-      Produce Flow
-    </div>
-
-    <div id='web-dev-personal-website'>
-      Personal Website
-    </div>
-  </div>
 
   </div>
 
