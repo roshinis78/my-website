@@ -1,0 +1,80 @@
+College,Major Name,2004,2004_male,2004_female,2004_illinois,2004_oos,2018,2018_male,2018_female,2018_illinois,2018_oos
+ACES,Animal Sciences,501,120,381,488,13,528,90,436,474,54
+ACES,Crop Sciences,84,62,21,79,5,132,73,59,114,18
+ACES,Food Science & Human Nutrition,357,81,276,340,17,333,83,250,244,89
+ACES,Horticulture,74,50,24,73,1,1,0,1,0,1
+ACES,Human Development & Family St,193,10,183,190,3,235,20,214,228,7
+ACES,Natural Resrcs & Environ Sci,201,113,88,194,7,241,98,143,203,38
+Applied Health Sciences,Community Health,347,68,279,336,11,608,152,456,578,30
+Applied Health Sciences,Kinesiology,543,195,348,496,47,564,251,313,507,57
+Applied Health Sciences,Speech & Hearing Science,224,8,216,220,4,242,10,232,231,11
+Business,Finance,771,521,250,682,89,630,450,180,506,124
+Education,Accountancy,897,482,414,743,154,817,386,431,499,318
+Education,Actuarial Science,232,152,80,190,42,362,209,153,221,141
+Education,Advertising,242,54,188,222,20,626,202,424,549,77
+Education,Anthropology,130,42,88,125,5,69,29,40,59,10
+Education,Early Childhood Education,66,3,63,63,3,50,2,48,43,7
+Education,Elementary Education,292,24,268,285,7,294,20,274,284,10
+Education,Special Education,71,5,66,70,1,107,14,92,105,2
+Engineering,Bioengineering,22,18,4,21,1,266,129,137,218,48
+Engineering,Civil Engineering,450,347,103,397,53,671,487,184,479,192
+Engineering,Computer Engineering,636,588,48,441,195,1184,1032,152,534,650
+Engineering,Computer Science,720,643,76,513,207,1054,742,311,552,502
+Engineering,Electrical Engineering,868,745,123,495,373,913,786,127,432,481
+Engineering,Engineering Mechanics,72,58,14,69,3,112,96,16,45,67
+Engineering,Engineering Physics,102,85,17,88,14,275,228,47,166,109
+Engineering,Industrial Engineering,70,43,27,58,12,271,202,69,155,116
+Engineering,Materials Science & Engr,225,170,55,178,47,325,233,92,189,136
+Engineering,Mechanical Engineering,777,689,88,661,116,860,671,189,581,279
+Fine and Applied Arts,Architectural Studies,547,308,238,482,65,416,249,167,333,83
+Fine and Applied Arts,Art Education,74,8,66,72,2,36,2,34,35,1
+Fine and Applied Arts,Crafts,30,9,21,27,3,4,0,4,3,1
+Fine and Applied Arts,Dance,57,6,51,41,16,57,4,53,41,16
+Fine and Applied Arts,Graphic Design,88,29,59,74,14,185,58,127,150,35
+Fine and Applied Arts,History of Art,21,3,18,20,1,8,3,5,5,3
+Fine and Applied Arts,Industrial Design,85,43,42,73,12,201,99,102,100,101
+Fine and Applied Arts,Instrumental Music,112,55,57,73,39,77,30,47,57,20
+Fine and Applied Arts,Landscape Architecture,125,72,53,122,3,50,20,30,36,14
+Fine and Applied Arts,Music Composition,12,11,1,11,1,10,10,0,7,3
+Fine and Applied Arts,Music Education,188,73,115,171,17,136,61,75,129,7
+Fine and Applied Arts,Open Studies,10,8,2,8,2,5,2,3,5,0
+Fine and Applied Arts,Painting,48,20,28,45,3,36,4,32,31,5
+Fine and Applied Arts,Photography,21,5,16,21,0,32,8,24,27,5
+Fine and Applied Arts,Sculpture,17,8,9,16,1,3,2,1,3,0
+Fine and Applied Arts,Theatre,141,67,74,128,13,120,56,63,109,11
+Fine and Applied Arts,Voice,26,5,21,16,10,25,8,17,20,5
+LAS,Astronomy,41,20,21,37,4,89,61,28,60,29
+LAS,Biochemistry,236,115,120,199,37,170,84,86,134,36
+LAS,Biology,129,55,74,117,12,5,3,2,4,1
+LAS,Chemical Engineering,304,199,105,226,78,653,439,212,440,213
+LAS,Chemistry,400,197,203,366,34,517,275,242,355,162
+LAS,Classics,29,12,17,26,3,13,6,7,12,1
+LAS,Comparative Literature,13,5,8,12,1,10,3,7,6,4
+LAS,E Asian Languages & Cultures,35,17,17,29,6,34,13,21,26,8
+LAS,Economics,559,419,140,475,84,950,688,262,601,349
+LAS,English,891,285,606,862,29,359,89,270,347,12
+LAS,French,61,14,47,52,9,15,8,7,15,0
+LAS,Geology,44,30,14,44,0,62,39,23,54,8
+LAS,Germanic Lang & Lit,16,7,9,14,2,4,0,4,4,0
+LAS,History,563,362,201,551,12,258,167,91,237,21
+LAS,History of Art,38,5,33,37,1,17,2,15,14,3
+LAS,Individual Plans of Study,4,0,4,4,0,13,5,8,13,0
+LAS,Integrative Biology,188,82,106,175,13,347,147,200,317,30
+LAS,Interdisciplinary,26,12,14,24,2,2,1,1,2,0
+LAS,Italian,6,1,5,6,0,2,0,2,2,0
+LAS,Latin American Studies,7,4,3,7,0,2,2,0,2,0
+LAS,Linguistics,35,17,18,27,8,83,38,45,69,14
+LAS,Math & Computer Science,159,138,20,118,41,273,225,48,85,188
+LAS,Mathematics,267,151,116,237,30,157,89,68,48,109
+LAS,Molecular and Cellular Biology,690,293,397,637,53,953,418,535,852,101
+LAS,Philosophy,92,72,20,88,4,87,64,23,69,18
+LAS,Physics,190,145,45,150,40,275,219,56,145,130
+LAS,Political Science,900,533,366,848,52,720,393,326,677,43
+LAS,Psychology,1180,312,868,1104,76,673,165,508,554,119
+LAS,Sociology,301,97,204,284,17,179,62,117,151,28
+LAS,Spanish,242,70,171,232,10,77,27,50,76,1
+LAS,Statistics,29,22,7,27,2,375,228,147,170,205
+LAS,Statistics & Computer Science,15,12,3,8,7,259,195,64,77,182
+LAS,Teaching of French,6,1,5,6,0,1,0,1,1,0
+LAS,Teaching of Spanish,26,4,22,26,0,7,0,7,7,0
+Media,Broadcast Journalism,68,27,41,66,2,1,0,1,1,0
