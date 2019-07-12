@@ -57,7 +57,7 @@ header {
 }
 
 .info-transparent {
-  background-color: #17a3b8ef;
+  background: #17a3b8ef;
   z-index: 4000;
   border-radius: 0%;
 }
