@@ -108,7 +108,7 @@
             </div>
           </div>
           <div class='card-body'>
-            <span class='badge badge-warning text-white'>I'm a TA for this class!</span>
+            <span class='badge badge-warning text-white'>I'm a UA for this class!</span>
             <span class='badge badge-light'>x86 Assembly</span>
             <span class='badge badge-light'>C</span>
             <span class='badge badge-light'>Data Structures</span>
@@ -339,12 +339,32 @@
         </div>
       </header>
 
-      <div>
-        I'm a TA for this class! Read more about my work <a href='hire.html'>here</a>
+      <div id='os-ta-job'>
+        <h4>I'm an Undergraduate Assistant (UA) for this class! (Spring 2019, Fall 2020)</h4>
+        <p>
+          As a student in the class, I learned so much in office hours, so I chose to give back to the class by
+          joining the course staff. I hold weekly office hours to help students master course
+          material (x86 ISA, interrupt support, synchronization, file systems, VGA, scheduling) and overcome bugs and
+          conceptual challenges when writing code. I also grade machine problems, exams, and the final operating system
+          project demo. I am currently working on a project that uses decision trees to categorize Office Hours queue
+          data from Spring 2019 by assignment. I hope to display insights on an interactive visualization that will be
+          helpful to both the course staff and students.
+        </p>
       </div>
 
       <div id='os-panic-at-the-kernel'>
-        Panic at the Kernel OS
+        <h4>Panic at the Kernel OS (Fall 2018)</h4>
+        <p>
+          In this project, my team and I built our own operating system in 3 months using x86 Assembly and C.
+          I set up interrupt handling with assembly linkage for exceptions and hardware interrupts (keyboard, RTC,
+          PIT). I also parsed the given read-only filesystem, provided support for all read-only filesystem operations
+          (open, close, read) through system calls, and developed assembly linkage for system calls through the
+          Interrupt Descriptor Table. Additionally, I implemented two system calls, execute and halt, which perform a
+          context switch to run and return from user-level programs respectively. I also designed the process control
+          block to contain a file operations jumptable and a file descriptor array so that we could handle multiple
+          processes. Throughout the project, we created a comprehensive set of unit tests to ensure that all components
+          were functioning as expected.
+        </p>
       </div>
     </div>
 
