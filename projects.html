@@ -51,11 +51,14 @@
         <div class='card'>
           <div class='card-header'>
             <div class='d-flex flex-wrap'>
-              <h5 class='col-auto col-lg-12 pl-1 pr-0'>FPGA</h5>
-              <a class='card-link col col-lg-12 pl-1 pr-0' href='#line-before-fpga'>View Projects</a>
+              <h5 class='pl-1 pr-0'>FPGA</h5>
+              <button class='btn btn-light p-0 ml-auto d-block d-md-none' type='button' data-toggle='collapse'
+                data-target='#fpga-card-body'>
+                <i class='fa fa-lg fa-angle-down'></i></button>
             </div>
+            <a class='card-link pl-1 pr-0' href='#line-before-fpga'>View Projects</a>
           </div>
-          <div class='card-body'>
+          <div class='card-body collapse d-md-block' id='fpga-card-body'>
             <span class='badge badge-info'>I scored in the top 3% of this class!</span>
             <span class='badge badge-light'>FPGA</span>
             <span class='badge badge-light'>SystemVerilog</span>
@@ -76,11 +79,14 @@
         <div class='card'>
           <div class='card-header'>
             <div class='d-flex flex-wrap'>
-              <h5 class='col-auto col-lg-12 pl-1 pr-0'>Data Visualization</h5>
-              <a class='card-link col col-lg-12 pl-1 pr-0' href='#line-before-data-viz'>View Projects</a>
+              <h5 class='pl-1 pr-0'>Data Visualization</h5>
+              <button class='btn btn-light p-0 ml-auto d-block d-md-none' type='button' data-toggle='collapse'
+                data-target='#data-viz-card-body'>
+                <i class='fa fa-lg fa-angle-down'></i></button>
             </div>
+            <a class='card-link pl-1 pr-0' href='#line-before-data-viz'>View Projects</a>
           </div>
-          <div class='card-body'>
+          <div class='card-body collapse d-md-block' id='data-viz-card-body'>
             <span class='badge badge-success'>This is my honors specialization!</span>
             <span class='badge badge-light'>D3.js</span>
             <span class='badge badge-light'>pandas</span>
@@ -103,11 +109,14 @@
         <div class='card'>
           <div class='card-header'>
             <div class='d-flex flex-wrap'>
-              <h5 class='col-auto col-lg-12 pl-1 pr-0'>Operating Systems</h5>
-              <a class='card-link col col-lg-12 pl-1 pr-0' href='#line-before-os'>View Projects</a>
+              <h5 class='pl-1 pr-0'>Operating Systems</h5>
+              <button class='btn btn-light p-0 ml-auto d-block d-md-none' type='button' data-toggle='collapse'
+                data-target='#os-card-body'>
+                <i class='fa fa-lg fa-angle-down'></i></button>
             </div>
+            <a class='card-link pl-1 pr-0' href='#line-before-os'>View Projects</a>
           </div>
-          <div class='card-body'>
+          <div class='card-body collapse d-md-block' id='os-card-body'>
             <span class='badge badge-warning text-white'>I'm a UA for this class!</span>
             <span class='badge badge-light'>x86 Assembly</span>
             <span class='badge badge-light'>C</span>
@@ -129,11 +138,14 @@
         <div class='card'>
           <div class='card-header'>
             <div class='d-flex flex-wrap'>
-              <h5 class='col-auto col-lg-12 pl-1 pr-0'>Web Development</h5>
-              <a class='card-link col col-lg-12 pl-1 pr-0' href='#line-before-web-dev'>View Projects</a>
+              <h5 class='pl-1 pr-0'>Web Development</h5>
+              <button class='btn btn-light p-0 ml-auto d-block d-md-none' type='button' data-toggle='collapse'
+                data-target='#web-dev-card-body'>
+                <i class='fa fa-lg fa-angle-down'></i></button>
             </div>
+            <a class='card-link pl-1 pr-0' href='#line-before-web-dev'>View Projects</a>
           </div>
-          <div class='card-body'>
+          <div class='card-body collapse d-md-block' id='web-dev-card-body'>
             <span class='badge badge-orange'>I created this website from scratch!</span>
             <span class='badge badge-light'>JavaScript</span>
             <span class='badge badge-light'>HTML</span>
@@ -340,7 +352,7 @@
       </header>
 
       <div id='os-ta-job'>
-        <h4>I'm an Undergraduate Assistant (UA) for this class! (Spring 2019, Fall 2020)</h4>
+        <h4>I'm an Undergraduate Assistant for ECE 391! (Spring 2019, Fall 2020)</h4>
         <p>
           As a student in the class, I learned so much in office hours, so I chose to give back to the class by
           joining the course staff. I hold weekly office hours to help students master course
