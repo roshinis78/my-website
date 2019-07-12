@@ -1,9 +1,6 @@
 // Using jQuery, read our data and call visualize(...) only once the page is ready:
 $(function () {
     d3.csv('data/majors.csv').then(function (data) {
-        // Write the data to the console for debugging:
-        console.log(data)
-
         // Call our visualize function:
         visualizeMajors(data)
     })
@@ -210,7 +207,6 @@ var visualizeMajors = function (data) {
             if (endY[i] < startY[i]) {
                 y = endY[i]
             }
-            console.log(y - 100)
             return y - 100
         })
         .attr('rx', '5')

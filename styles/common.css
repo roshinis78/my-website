@@ -56,8 +56,6 @@ footer {
   background-color: #fff
 }
 
-/* Text content on my page is padded sufficiently */
-.content {
-  padding-left: 15%;
-  padding-right: 15%;
+html {
+  scroll-behavior: smooth;
 }

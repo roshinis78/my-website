@@ -1,9 +1,6 @@
 // Using jQuery, read our data and call visualize(...) only once the page is ready:
 $(function () {
     d3.csv('data/plantbased.csv').then(function (data) {
-        // Write the data to the console for debugging:
-        console.log(data)
-
         // Call our visualize function:
         visualizePlantbased(data)
     })
@@ -223,7 +220,6 @@ var visualizePlantbased = function (data) {
         })
         .attr('x', legend.startX + 20)
         .attr('y', function (d, i) {
-            console.log(legend.startY + i * legend.rectHeight + 40)
             return legend.startY + i * legend.rectHeight + 15
         })
         .style('font', '15px calibri')
