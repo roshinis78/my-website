@@ -1,3 +1,5 @@
+/***************************************************************/
+/* HEADER STYLING */ 
 header {
   background-image: url('../images/pier-panoramic_edited.jpg');
   height: 344px;
@@ -7,14 +9,8 @@ header {
   background: rgba(245, 245, 245, 0.685);
 }
 
-.card {
-  margin-left: 7px;
-  margin-right: 7px;
-  max-width: 260px;
-}
-
-.card img {
-  max-width: 260px;
+.bg-transparent-light h1 {
+  text-align: center;
 }
 
 #hand:hover, .close:active#hand {
@@ -41,18 +37,69 @@ header {
   }
 }
 
+/***************************************************************/
+/* CAROUSEL STYLING */ 
+.card {
+  margin-left: 7px;
+  margin-right: 7px;
+  max-width: 260px;
+}
+
+.card img {
+  max-width: 260px;
+}
+
+/* Extra small screens */ 
+@media (max-width: 576px) {
+  .carousel-item img {
+    max-width: 100%;
+    filter: brightness(0.6)
+  }
+  .carousel-item .card-link {
+    color: #66ffff;
+  }
+}
+
+/* Bootstrap's card class but horizontal */
+.card-horizontal {
+  display: flex;
+  flex-direction: row; 
+  align-items: center; 
+
+  min-width: 0;
+  margin: 0% 10%;
+  word-wrap: break-word;
+  background-color: #fff;
+  border-radius: 0.25rem;
+
+  background: #343a40;
+  color: white;
+}
+
+.card-horizontal img {
+  border-top-left-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
+
+  width: 300px;
+  height: 300px;
+}
+
+/***************************************************************/
+/* LOOKING FOR INTERNSHIPS ALERT STYLING */
 .info-transparent {
   background: #17a3b8ef;
   z-index: 4000;
   border-radius: 0%;
 }
 
-.z-5000 {
-  z-index: 5000;
-}
-
 .mw-200 {
   max-width: 200px;
+}
+
+@media (min-width: 768px) {
+  .mw-200 {
+    max-width: 250px;
+  }
 }
 
 .scroll-alert {
