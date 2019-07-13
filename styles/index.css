@@ -69,3 +69,7 @@ header {
 .mw-200 {
   max-width: 200px;
 }
+
+.scroll-alert {
+  overflow-y: scroll;
+}
