@@ -1,4 +1,5 @@
 footer {
+  background: #f8f9fa;
   color: #6c757d;
 
   display: flex;
@@ -11,7 +12,15 @@ footer {
   height: auto;
 }
 
-/* Bootstrap social doesn't have settings for gitlab, so I followed their formatting and made my own */
+html {
+  scroll-behavior: smooth;
+}
+
+.mw-navbar-logo {
+  max-width: 40px;
+}
+
+/* Similar to Bootstrap Social but for GitLab colors */
 .btn-gitlab {
   color: #fff;
   background-color: #de7e00;
@@ -54,12 +63,4 @@ footer {
 .btn-gitlab .badge {
   color: #de7e00;
   background-color: #fff
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-.mw-navbar-logo {
-  max-width: 40px;
 }
