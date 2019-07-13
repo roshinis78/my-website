@@ -59,3 +59,7 @@ footer {
 html {
   scroll-behavior: smooth;
 }
+
+.mw-navbar-logo {
+  max-width: 40px;
+}
