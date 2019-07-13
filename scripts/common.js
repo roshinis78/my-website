@@ -29,3 +29,11 @@ $(window).on('scroll', function () {
         sessionStorage.setItem('scrollLinkClicked', false)
     }
 })
+
+// only show the alert once in a session
+$(document).ready(function () {
+    if (sessionStorage.getItem('firstOpen') != 'false') {
+        $('#job-alert').attr('class', 'alert alert-dismissable w-100 h-100 info-transparent fixed-top scroll-alert')
+        sessionStorage.setItem('firstOpen', 'false')
+    }
+}) 
