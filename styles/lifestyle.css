@@ -1,0 +1,17 @@
+.cursive {
+    font-family: 'Cedarville Cursive', cursive;
+}
+
+header {
+    background-image: url('../images/sunflower-spring-cropped.jpg');
+    background-size: 100% auto;
+    height: 320px;
+}
+
+header h1 {
+    color: white;
+    background: #ffd1dc;
+    padding: 0.4rem;
+    border-radius: 0.25rem;
+    font-size: 72px;
+}
