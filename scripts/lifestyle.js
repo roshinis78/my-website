@@ -3,12 +3,14 @@
 // medium screens and above - display in a row
 
 $(document).ready(function () {
-    lifestyleCarouselExpand()
+    // when the page loads, adjust the card display form as needed
+    adjustLifestyleCardDisplay()
 })
 
-$(window).on('resize', lifestyleCarouselExpand)
+// when the page resizes, adjust the card display form if necessary
+$(window).on('resize', adjustLifestyleCardDisplay)
 
-function lifestyleCarouselExpand() {
+function adjustLifestyleCardDisplay() {
     // if not already expanded, expand the carousel to a row of cards for medium screens and above
     if (($('#lifestyle-cards').attr('class') == 'carousel-inner') && ($(window).width() >= 768)) {
         // remove the class and data-ride attributes from the div with class 'carousel'
@@ -27,3 +29,15 @@ function lifestyleCarouselExpand() {
         location.reload()
     }
 }
+
+// touch/click event listeners for lifestyle cards
+$('.front, .back').on('touchstart', function () {
+    console.log(this)
+    $(this).css('display', 'none')
+    if ($(this).attr('class') == 'front') {
+        $(this.nextElementSibling).css('display', 'flex')
+    }
+    else {
+        $(this.previousElementSibling).css('display', 'flex')
+    }
+})
