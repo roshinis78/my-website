@@ -31,24 +31,12 @@ function adjustLifestyleCardDisplay() {
 }
 
 // touch/click event listeners for lifestyle cards
-$('.front, .back').on('touchstart', function () {
-    console.log(this)
+$('.front').on('touchstart', function () {
     $(this).css('display', 'none')
-    if ($(this).attr('class') == 'front') {
-        $(this.nextElementSibling).css('display', 'flex')
-    }
-    else {
-        $(this.previousElementSibling).css('display', 'flex')
-    }
+    $(this.nextElementSibling).css('display', 'flex')
 })
 
-$('.front, .back').on('touchend', function () {
-    console.log(this)
-    $(this).css('display', 'flex')
-    if ($(this).attr('class') == 'front') {
-        $(this.nextElementSibling).css('display', 'none')
-    }
-    else {
-        $(this.previousElementSibling).css('display', 'none')
-    }
+$('.back').on('touchend', function () {
+    $(this).css('display', 'none')
+    $(this.previousElementSibling).css('display', 'flex')
 })
