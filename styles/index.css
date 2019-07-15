@@ -2,6 +2,7 @@
 /* HEADER STYLING */ 
 header {
   background-image: url('../images/pier-panoramic_edited.jpg');
+  background-size: cover;
   height: 344px;
 }
 

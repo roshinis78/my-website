@@ -1,32 +1,30 @@
-blockquote p {
-    font-family: 'Cedarville Cursive', cursive;
-    font-size: 32px;
-    text-align: center;
-}
-
-blockquote cite {
-    font-family: 'Cedarville Cursive', cursive;
-    font-size: 90%;
-    text-align: right;
-}
-
+/***************************************************************/
+/* LIFESTYLE HEADER STYLING */
 header {
     background-image: url('../images/sunflower-spring-cropped.jpg');
-    background-size: 100% auto;
+    background-size: cover;
     height: 316px;
 }
 
 header h1 {
     color: white;
-    background: #ffd1dc;
+    text-shadow: 3px 3px #ffd1dca6;
 
     padding: 0.4rem;
     border-radius: 0.25rem;
 
-    font-size: 72px;
+    font-size: 100px;
     font-family: 'Cedarville Cursive', cursive;
 }
 
+@media (max-width: 576px) {
+    header h1 {
+        font-size: 72px;
+    }
+}
+
+/***************************************************************/
+/* INFO CARDS STYLING */
 .card img {
     width: 40%;
     height: auto;
@@ -37,20 +35,30 @@ header h1 {
 }
 
 .card {
-    margin: 1%;
+    margin: 1rem 0rem;
     width: 260px;
-    height: 300px;
+    height: 360px;
 
     color: white;
     border: none;
 }
 
+.card-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
 .card .front, .card .back {
     width: 100%;
     height: 100%;
+}
 
+.card .front {
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-evenly;
 }
@@ -66,9 +74,51 @@ header h1 {
 }
 
 .card:hover .back {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
 }
 
+/***************************************************************/
+/* CARD CONTENT STYLING - BADGES, BLOCKQUOTES */
+.badge-transparent {
+    background: rgba(0, 0, 0, 0.075);
+    color: white;
+}
+
+blockquote .big {
+    font-family: 'Cedarville Cursive', cursive;
+    font-size: 32px;
+    text-align: center;
+}
+
+blockquote .small {
+    font-family: 'Cedarville Cursive', cursive;
+    font-size: 18px;
+    text-align: center;
+}
+
+blockquote cite {
+    font-family: 'Cedarville Cursive', cursive;
+    font-size: 90%;
+    text-align: right;
+}
+
+.card a {
+    color: white;
+    text-decoration: none;
+    border-radius: 0.25rem;
+    padding-left: 0.1rem;
+    padding-right: 0.1rem;
+}
+
+.card a:hover {
+    background: rgba(0, 0, 0, 0.075);
+}
+
+/***************************************************************/
+/* CARD BACKGROUND COLORS */ 
 .bg-sunset {
     background: linear-gradient(#ff8ea870, #ffca7c75);
 }
@@ -91,4 +141,20 @@ header h1 {
 
 .bg-silent {
     background: linear-gradient(white, lightgrey);
+}
+
+/***************************************************************/
+/* CAROUSEL STYLING */
+
+.carousel-item .card {
+    width: 100%;
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+    .carousel-item .card {
+        max-height: 270px;
+    }
+    .carousel-item .card img {
+        width: 30%;
+    }
 }
