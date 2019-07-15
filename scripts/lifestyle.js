@@ -41,3 +41,14 @@ $('.front, .back').on('touchstart', function () {
         $(this.previousElementSibling).css('display', 'flex')
     }
 })
+
+$('.front, .back').on('touchend', function () {
+    console.log(this)
+    $(this).css('display', 'flex')
+    if ($(this).attr('class') == 'front') {
+        $(this.nextElementSibling).css('display', 'none')
+    }
+    else {
+        $(this.previousElementSibling).css('display', 'none')
+    }
+})
