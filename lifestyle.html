@@ -51,161 +51,8 @@
   </header>
 
   <div class='container'>
-    <div class='card-row d-none d-md-flex'>
-
-      <div class='card bg-sunset'>
-        <div class='front'>
-          <img src='images/book-symbol.png'>
-          <h3>Books</h3>
-        </div>
-
-        <div class='back'>
-          <p><strong>The Power of Now</strong> Eckhart Tolle</p>
-          <p><strong>The Life-Changing Magic of Tidying Up</strong> Marie Kondo</p>
-          <p><strong>Deep Work</strong> Cal Newport</p>
-          <p><strong>The Book of Joy</strong> 14th Dalai Lama & Desmond Tutu</p>
-
-          <p>
-            <span class='badge badge-transparent'>Reading</span>
-            <strong>The 7 Habits of Highly Effective People</strong> Stephen Covey
-          </p>
-          <p>
-            <span class='badge badge-transparent'>Reading</span>
-            <strong>A Random Walk Down Wall Street</strong> by Burton G. Malkiel
-          </p>
-        </div>
-      </div>
-
-      <div class='card bg-sea'>
-        <div class='front'>
-          <img src='images/window-symbol.png'>
-          <h3>Mindset</h3>
-        </div>
-
-        <div class='back'>
-          <blockquote>
-            <p class='big'>hope for today to be exactly as it is.</p>
-            <cite>— Kalyn Nicholson</cite>
-          </blockquote>
-        </div>
-      </div>
-
-      <div class='card bg-clarity'>
-        <div class='front'>
-          <img src='images/heart-symbol.png'>
-          <h3>Wellbeing</h3>
-        </div>
-
-        <div class='back'>
-          <p>Daily <strong>mindfulness</strong>, guiding my presence to the current moment</p>
-          <p>Morning <strong>yoga</strong>, long walks, hikes, biking</p>
-          <p>Spontaneous <strong>adventures</strong> around campus, alongside nature, with friends</p>
-          <p>Currently working on <strong>maintaining a consistent sleep cycle</strong></p>
-        </div>
-      </div>
-
-      <div class='card bg-sunrise'>
-        <div class='front'>
-          <img src='images/paint-symbol.png'>
-          <h3>Art</h3>
-        </div>
-
-        <div class='back'>
-          <p><strong>Bullet Journalling</strong></p>
-          <p><strong>Watercolor painting</strong></p>
-          <p><strong>Brush calligraphy</strong></p>
-          <p><strong>Abstract designs</strong></p>
-          <p><strong>Colam (Rangoli)</strong></p>
-          <p>I painted the <strong>watercolor sprites</strong> on the fronts of these cards!</p>
-        </div>
-      </div>
-
-      <div class='card bg-clarity'>
-        <div class='front'>
-          <img src='images/sea-symbol.png'>
-          <h3>Experiences</h3>
-        </div>
-        <div class='back'>
-          <blockquote>
-            <p class='small'>
-              Ocean, desert, the world.<br>
-              Everything's the same thing, with a different name.<br>
-              It's life again.
-            </p>
-            <cite>—'Sea', BTS</cite>
-          </blockquote>
-          <p>The <strong>ocean</strong> is my favorite place in the entire world</p>
-        </div>
-      </div>
-
-      <div class='card bg-sunrise'>
-        <div class='front'>
-          <img src='images/rainbow-symbol.png'>
-          <h3>Community</h3>
-        </div>
-
-        <div class='back'>
-          <p><strong>People who inspire me</strong></p>
-
-          <p>
-            <a target='_blank' href='https://www.kalynnicholson.com/'><strong>Kalyn Nicholson</strong> (KOZE)</a>
-          </p>
-
-          <p>
-            <a target='_blank' href='https://www.3blue1brown.com/'><strong>Grant Sanderson</strong> (3Blue1Brown)</a>
-          </p>
-
-          <p>
-            <a target='_blank' href='https://www.pickuplimes.com/'><strong>Sadia Badiei</strong> (Pick Up Limes)</a>
-          </p>
-
-          <p>
-            <a target='_blank' href='https://www.nathanieldrew.com/'><strong>Nathaniel Drew</strong></a>
-          </p>
-
-          <p>
-            <a target='_blank' href='https://plumvillage.org/about/thich-nhat-hanh/'><strong>Thich Nhat
-                Hanh</strong></a>
-          </p>
-        </div>
-      </div>
-
-      <div class='card bg-sunset'>
-        <div class='front'>
-          <img src='images/plant-symbol.png'>
-          <h3>Plants</h3>
-        </div>
-        <div class='back'>
-          <p>I've grown several <strong>succulents</strong> and resurrected a nearly dead <strong>jasmine tree</strong>
-            in my backyard (it died again though when I left to college), but that's just the start of my gardening
-            adventures.</p>
-          <p>I'm transitioning to a <strong>plantbased lifestyle</strong>, and I plan on growing an <strong>aloe
-              vera</strong> plant this semester!</p>
-        </div>
-      </div>
-
-      <div class='card bg-sea'>
-        <div class='front'>
-          <img src='images/sun-symbol.png'>
-          <h3>Energy</h3>
-        </div>
-
-        <div class='back'>
-          <p>Transitioning first to a <strong>vegetarian</strong> lifestyle, and then to a
-            <strong>plantbased</strong> vegan lifestyle
-          </p>
-          <p><strong>Reducing my use</strong> and purchase <strong>of single-use plastic</strong> bags and containers
-          </p>
-          <p>
-            Utilizing my purchasing power to support <strong>ethical</strong> and <strong>sustainable</strong> brands
-          </p>
-        </div>
-      </div>
-
-    </div>
-
-    <div class='carousel slide d-block d-md-none' data-ride='carousel' id='lifestyle-carousel'>
-      <div class='carousel-inner'>
+    <div class='carousel slide' data-ride='carousel' id='lifestyle-carousel'>
+      <div class='carousel-inner' id='lifestyle-cards'>
 
         <div class='carousel-item active'>
           <div class='card bg-sunset'>
@@ -378,7 +225,7 @@
 
       </div> <!-- End of carousel inner-->
 
-      <ol class='carousel-indicators'>
+      <ol class='carousel-indicators d-flex d-md-none'>
         <li data-target='#lifestyle-carousel' data-slide-to='0' class='active'></li>
         <li data-target='#lifestyle-carousel' data-slide-to='1'></li>
         <li data-target='#lifestyle-carousel' data-slide-to='2'></li>
@@ -424,6 +271,7 @@
 
   <!-- My js utility functions -->
   <script src='scripts/common.js'></script>
+  <script src='scripts/lifestyle.js'></script>
 </body>
 
 </html>
