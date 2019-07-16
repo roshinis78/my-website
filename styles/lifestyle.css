@@ -162,3 +162,10 @@ blockquote cite {
         width: 30%;
     }
 }
+
+.carousel-item {
+    transition: -webkit-transform 1s ease-in-out;
+    transition: transform 1s ease-in-out;
+    transition: transform 1s ease-in-out, -webkit-transform 1s ease-in-out;
+}
+
