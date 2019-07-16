@@ -61,6 +61,9 @@ header h1 {
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-evenly;
+
+    transition-property: display;
+    transition-duration: 5s;
 }
 
 .card:hover .front {
@@ -71,13 +74,14 @@ header h1 {
     display: none;
     padding: 10%;
     font-size: 14px;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
 }
 
 .card:hover .back {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
 }
 
 /***************************************************************/

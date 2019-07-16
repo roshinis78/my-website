@@ -32,11 +32,11 @@ function adjustLifestyleCardDisplay() {
 
 // touch/click event listeners for lifestyle cards
 $('.card').on('touchstart', function () {
-    $(this > '.front').css('display', 'none')
-    $(this > '.back').css('display', 'flex')
+    $(this.firstElementChild).css('display', 'none')
+    $(this.firstElementChild.nextElementSibling).css('display', 'flex')
 })
 
 $('.card').on('touchend', function () {
-    $(this > '.back').css('display', 'none')
-    $(this > '.front').css('display', 'flex')
+    $(this.firstElementChild.nextElementSibling).css('display', 'none')
+    $(this.firstElementChild).css('display', 'flex')
 })
