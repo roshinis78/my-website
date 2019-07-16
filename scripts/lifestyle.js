@@ -31,17 +31,29 @@ function adjustLifestyleCardDisplay() {
     }
 }
 
+var swiping = false
+$('.card').on('touchmove', function () {
+    swiping = true
+})
+
 // touch/click event listeners for lifestyle cards
 $('.card').on('touchend', function () {
-    // if showing back of card, switch to show front
-    if ($(this.firstElementChild).css('display') == 'none') {
-        $(this.firstElementChild).css('display', 'flex')
-        $(this.firstElementChild.nextElementSibling).css('display', 'none')
+    if (!swiping) {
+        // if showing back of card, switch to show front
+        if ($(this.firstElementChild).css('display') == 'none') {
+            $(this.firstElementChild).css('display', 'flex')
+            $(this.firstElementChild.nextElementSibling).css('display', 'none')
+        }
+        // else if showing front of card, switch to show back
+        else {
+            $(this.firstElementChild).css('display', 'none')
+            $(this.firstElementChild.nextElementSibling).css('display', 'flex')
+        }
     }
-    // else if showing front of card, switch to show back
     else {
-        $(this.firstElementChild).css('display', 'none')
-        $(this.firstElementChild.nextElementSibling).css('display', 'flex')
+        console.log('swiping!')
+        swiping = false
     }
+
 })
 
