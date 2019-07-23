@@ -35,7 +35,7 @@ header h1 {
 }
 
 .card {
-    margin: 1rem 0rem;
+    margin: 0.5rem 0rem;
     width: 260px;
     height: 360px;
 
@@ -66,6 +66,18 @@ header h1 {
     transition-duration: 5s;
 }
 
+@supports (-ms-ime-align: auto){ /* MICROSOFT EDGE ONLY */
+    .card .front {
+        justify-content: center;
+    }
+    .card img {
+        margin-bottom: 2rem;
+    }
+    .card {
+        margin: 0.5rem 0.25rem;
+    }
+}
+
 .card:hover .front {
     display: none;
 }
@@ -77,7 +89,6 @@ header h1 {
 
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
 }
 
 .card:hover .back {
@@ -124,11 +135,13 @@ blockquote cite {
 /***************************************************************/
 /* CARD BACKGROUND COLORS */ 
 .bg-sunset {
-    background: linear-gradient(#ff8ea870, #ffca7c75);
+    background: linear-gradient(#ff8ea8, #ffca7c);
+    opacity: 0.8;
 }
 
 .bg-clarity {
-    background: linear-gradient(rgba(234, 211, 255, 0.726), #c4ebfdb2);
+    background: linear-gradient(rgb(234, 211, 255), #c4ebfd);
+    opacity: 0.8;
 }
 
 .bg-sea {
@@ -136,11 +149,13 @@ blockquote cite {
 }
 
 .bg-sunrise {
-    background: linear-gradient(#ffe13875, #ffca7c75);
+    background: linear-gradient(#ffe138, #ffca7c);
+    opacity: 0.8;
 }
 
 .bg-sunrise-reverse {
-    background: linear-gradient(#ffca7c75, #ffe13875);
+    background: linear-gradient(#ffca7c, #ffe138);
+    opacity: 0.8;
 }
 
 .bg-silent {

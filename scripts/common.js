@@ -33,7 +33,7 @@ $(window).on('scroll', function () {
 // only show the alert once in a session
 $(document).ready(function () {
     if (sessionStorage.getItem('firstOpen') != 'false') {
-        $('#job-alert').attr('class', 'alert alert-dismissable w-100 h-100 info-transparent fixed-top scroll-alert')
+        $('#job-alert').attr('class', 'alert alert-dismissable w-100 h-100 fixed-top opening-alert')
         sessionStorage.setItem('firstOpen', 'false')
     }
 }) 

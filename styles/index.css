@@ -87,10 +87,12 @@ header {
 
 /***************************************************************/
 /* LOOKING FOR INTERNSHIPS ALERT STYLING */
-.info-transparent {
-  background: #17a3b8ef;
+.opening-alert {
+  background-color: #17a3b8;
+  opacity: 0.95;
   z-index: 4000;
   border-radius: 0%;
+  overflow-y: scroll;
 }
 
 .logo {
@@ -103,8 +105,4 @@ header {
     max-width: 250px;
     max-height: 250px;
   }
-}
-
-.scroll-alert {
-  overflow-y: scroll;
 }
