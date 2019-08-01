@@ -17,7 +17,7 @@ $(function () {
         }
     })
 
-    $('.character-card').on('click touchmove', function () {
+    $('.character-card').on('touchmove', function () {
         scrolling = true;
     })
     $('.character-card').on('click touchend', function () {
