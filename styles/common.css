@@ -1,3 +1,8 @@
+html {
+  scroll-behavior: smooth;
+  height: 100%;
+}
+
 footer {
   background: #f8f9fa;
   color: #6c757d;
@@ -7,12 +12,9 @@ footer {
   align-items: center;
   justify-content: space-around;
 
-  padding: 1%;
+  width: 100%;
   height: auto;
-}
-
-html {
-  scroll-behavior: smooth;
+  padding: 0.25rem;
 }
 
 .navbar-logo {

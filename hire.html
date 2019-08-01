@@ -43,50 +43,30 @@
     </div>
   </navbar>
 
-  <div class='container main-menu rounded'>
-    <h1>Are you looking for a...</h1>
-
-    <div class='card-row'>
-      <div class='card'>
-        <img src='images/swe-symbol.png'>
+  <div class='container mt-start d-flex flex-column justify-content-center align-items-center'>
+    <h1 class='text-center mb-4'>Choose your intern (￣▽￣)ノ</h1>
+    <div class='card-row rounded mb-4'>
+      <div class='character-card' id='swe'>
+        <img src='images/swe-hover.png'>
         <h3>Software Engineer</h3>
       </div>
-
-      <div class='card'>
-        <img src='images/eve-symbol.png'>
-        <h3>Firmware Engineer</h3>
-      </div>
-
-      <div class='card'>
-        <img src='images/world-symbol.png'>
+      <div class='character-card' id='world'>
+        <img src='images/world-hover.png'>
         <h3>Data Scientist</h3>
       </div>
-
-      <div class='card'>
-        <img src='images/sail-symbol.png'>
+      <div class='character-card' id='eve'>
+        <img src='images/eve-hover.png'>
+        <h3>Firmware Engineer</h3>
+      </div>
+      <div class='character-card' id='sail'>
+        <img src='images/sail-hover.png'>
         <h3>Creative Leader</h3>
       </div>
     </div>
-
+    <button type='button' class='btn btn-success' id='start-game-button'>
+      <h2>Let's go!</h2>
+    </button>
   </div>
-
-  <footer>
-    <div class='container d-flex align-items-center'>
-      <div class='mr-auto'>&copy;2019 Roshini Saravanakumar</div>
-      <div class='ml-auto'>
-        <a class='btn btn-social-icon btn-github' href='https://github.com/roshinis78' target='_blank'>
-          <i class='fa fa-github'></i>
-        </a>
-        <a class='btn btn-social-icon btn-gitlab' href='https://gitlab.com/roshinis' target='_blank'>
-          <i class='fa fa-gitlab'></i>
-        </a>
-        <a class='btn btn-social-icon btn-linkedin' href='https://www.linkedin.com/in/roshini-saravanakumar/'
-          target='_blank'>
-          <i class='fa fa-linkedin'></i>
-        </a>
-      </div>
-    </div>
-  </footer>
 
   <!-- Bootstrap scripts -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -101,6 +81,7 @@
 
   <!-- My js utility functions -->
   <script src='scripts/common.js'></script>
+  <script src='scripts/hire.js'></script>
 </body>
 
 </html>
