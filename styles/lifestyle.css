@@ -35,7 +35,7 @@ header h1 {
 }
 
 .card {
-    margin: 0.5rem 0rem;
+    margin: 0.5rem 0.25rem;
     width: 260px;
     height: 360px;
 
@@ -43,11 +43,17 @@ header h1 {
     border: none;
 }
 
+@media (max-width: 576px){
+    .card {
+        margin: 0.5rem 0rem;
+    }
+}
+
 .card-row {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: center;
 }
 
 .card .front, .card .back {
@@ -184,3 +190,6 @@ blockquote cite {
     transition: transform 1s ease-in-out, -webkit-transform 1s ease-in-out;
 }
 
+.carousel {
+    max-height: 100%;
+}

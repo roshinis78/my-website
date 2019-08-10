@@ -43,30 +43,39 @@
     </div>
   </navbar>
 
-  <div class='container mt-start mb-5 d-flex flex-column justify-content-center align-items-center'>
-    <h1 class='text-center mb-4'>Choose your intern (￣▽￣)ノ</h1>
-    <div class='card-row rounded mb-4'>
-      <div class='character-card' id='swe'>
-        <img src='images/swe-hover.png'>
-        <h3>Software Engineer</h3>
-      </div>
-      <div class='character-card' id='world'>
-        <img src='images/world-hover.png'>
-        <h3>Data Scientist</h3>
-      </div>
-      <div class='character-card' id='eve'>
-        <img src='images/eve-hover.png'>
-        <h3>Firmware Engineer</h3>
-      </div>
-      <div class='character-card' id='sail'>
-        <img src='images/sail-hover.png'>
-        <h3>Creative Leader</h3>
-      </div>
+  <div class='gameplay container'>
+    <div id='character-select-menu'>
+        <h1 class='text-center mb-4'>Choose your intern (￣▽￣)ノ</h1>
+        <div class='card-row rounded mb-4'>
+          <div class='character-card' id='swe'>
+            <img src='images/swe-hover.png'>
+            <h3>Software Engineer</h3>
+          </div>
+          <div class='character-card' id='world'>
+            <img src='images/world-hover.png'>
+            <h3>Data Scientist</h3>
+          </div>
+          <div class='character-card' id='eve'>
+            <img src='images/eve-hover.png'>
+            <h3>Firmware Engineer</h3>
+          </div>
+          <div class='character-card' id='sail'>
+            <img src='images/sail-hover.png'>
+            <h3>Creative Leader</h3>
+          </div>
+        </div>
+        <button class='btn btn-success w-auto' type='button' id='start-game-button'>
+          <h2>Let's go!</h2>
+        </button>
     </div>
-    <button type='button' class='btn btn-success' id='start-game-button'>
-      <h2>Let's go!</h2>
-    </button>
+
+    <div class='map'>
+      <img src='images/hire-scene-1.jpg'>
+    </div>
+    
   </div>
+
+  
 
   <!-- Bootstrap scripts -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

@@ -3,8 +3,16 @@ body {
     color: white;
 }
 
-.mt-start {
+.gameplay {
     margin-top: 100px;
+    margin-bottom: 2rem;
+}
+
+#character-select-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .character-card img {
@@ -47,4 +55,17 @@ body {
     .card-row {
         overflow-x: visible;
     }
+}
+
+/* Map styles */
+.map {
+    display: none;
+    max-width: 70%;
+    height: 400px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+
+.map img {
+    max-width: 1000px;
 }
