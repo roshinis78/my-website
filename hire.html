@@ -11,7 +11,7 @@
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
   <!-- Font Awesome -->
-  <link rel='stylesheet' href='https://unpkg.com/font-awesome@4.7.0/css/font-awesome.min.css'>
+  <script src='https://kit.fontawesome.com/70564c4270.js'></script>
 
   <!-- Bootstrap social -->
   <link rel='stylesheet' href='https://unpkg.com/bootstrap-social@5.1.1/bootstrap-social.css'>
@@ -43,24 +43,24 @@
     </div>
   </navbar>
 
-  <div class='gameplay container'>
-    <div id='character-select-menu'>
-        <h1 class='text-center mb-4'>Choose your intern (￣▽￣)ノ</h1>
+  <div class='container mt-5 pt-4 mb-1'>
+    <div class='pt-2' id='character-select-menu'>
+        <h1 class='text-center text-white mb-4'>Choose your intern (￣▽￣)ノ</h1>
         <div class='card-row rounded mb-4'>
           <div class='character-card' id='swe'>
-            <img src='images/swe-hover.png'>
+            <img src='images/swe-symbol.png'>
             <h3>Software Engineer</h3>
           </div>
           <div class='character-card' id='world'>
-            <img src='images/world-hover.png'>
+            <img src='images/world-symbol.png'>
             <h3>Data Scientist</h3>
           </div>
           <div class='character-card' id='eve'>
-            <img src='images/eve-hover.png'>
+            <img src='images/eve-symbol.png'>
             <h3>Firmware Engineer</h3>
           </div>
           <div class='character-card' id='sail'>
-            <img src='images/sail-hover.png'>
+            <img src='images/sail-symbol.png'>
             <h3>Creative Leader</h3>
           </div>
         </div>
@@ -69,8 +69,145 @@
         </button>
     </div>
 
-    <div class='map'>
-      <img src='images/hire-scene-1.jpg'>
+    <div id='profile'>
+      <div class='d-flex justify-content-between' id='profile-content'>
+
+        <!-- Profile, socials and 5 star list -->
+        <div class='col-12 col-md-4 p-0 p-md-2'>
+          <div class='block'>
+            <img class='align-self-center' src='images/john-deere.jpg'>
+            <h3 class='mt-3'>Roshini Saravanakumar</h3>
+            <p>Computer Engineering - Class of 2021 <br> 
+              University of Illinois at Urbana Champaign <br>
+              ✅ Overall GPA: 3.90 / 4.00 <br>
+              🎓 James Scholar Honors Program <br>
+              🌟 John Deere Foundation Scholarship (2019)
+            </p>
+          </div>
+
+          <div class='block d-flex justify-content-between'>
+              <a class='btn btn-social-icon btn-github' href='https://github.com/roshinis78' target='_blank'>
+                <i class='fab fa-github'></i>
+              </a>
+              <a class='btn btn-social-icon btn-linkedin' href='https://www.linkedin.com/in/roshini-saravanakumar/'
+                target='_blank'>
+                <i class='fab fa-linkedin'></i>
+              </a>
+              <a class='btn btn-social-icon btn-vimeo' href='https://github.com/roshinis78/my-resume/blob/master/README.md'
+                target='_blank'>
+                <i class='fa fa-file-text-o'></i>
+              </a>
+              <a class='btn btn-social-icon btn-google' href='mailto:roshini2@illinois.edu' target='_blank'>
+                <i class='fa fa-envelope-o'></i>
+              </a>
+              <a class='btn btn-social-icon btn-gitlab' href='https://gitlab.com/roshinis' target='_blank'>
+                <i class='fab fa-gitlab'></i>
+              </a>
+              <a class='btn btn-social-icon btn-goodreads' href='https://www.goodreads.com/user/show/74783079-roshini' target='_blank'>
+                <i class='fab fa-goodreads-g'></i>
+              </a>
+          </div>
+
+          <div class='card card-block'>
+            <h3 class='card-header'>The ⭐⭐⭐⭐⭐ List</h3>
+            <div class='card-body'>
+              <p>⭐ Quick, creative, and elegant solutions</p>
+              <p>⭐ Independent and self-driven explorer</p>
+              <p>⭐ Fluent in various languages and tools</p>
+              <p>⭐ Natural leader in team endeavors</p>
+              <p>⭐ Excellent coding style + readable code</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Work Experience and Relevant skills -->
+        <div class='col-12 col-md-4 p-0 p-md-2'>
+          <div class='card card-block'>
+            <h3 class='card-header'>Work Experience</h3>
+
+            <div class='card-body'>
+              <h5>Produce Flow Tracker<br> <i>Summer 2019</i></h5>
+              <p>
+                Produce Flow refers to the global flow of produce across countries and regions. Through this series of visualizations,
+                we have created an invaluable analytics tool to study individual crop flows or country flows to allow users to explore
+                data provided by the Food and Agriculture Organization of the United Nations.
+                <br>
+                <a href='https://roshinis78.github.io/produce-tracker/' target='_blank'>Visit the project website to learn more!
+                  <i class='fa fa-lg fa-globe'></i></a>
+              </p>
+              
+              <h5>Computer Systems Engineering Undergraduate Assistant<br> <i>Spring 2019</i></h5>
+              <p>
+                As a student in ECE 391, I learned so much in office hours, so I chose to give back to the class by
+                joining the course staff. 
+                <br>
+                <a href='projects.html#os-ta-job'>Read more about my work here!</a>
+              </p>
+            </div>
+          </div>
+
+          <div class='card card-block'>
+              <h3 class='card-header'>Relevant Skills</h3>
+              <div class='card-body'>
+                <p class='badge badge-light'>CS 225: Data Structures</p>
+                <p class='badge badge-light'>C</p>
+                <p class='badge badge-light'>C++</p>
+                <p class='badge badge-light'>x86 Assembly</p>
+                <p class='badge badge-light'>Java</p>
+                <p class='badge badge-light'>JavaScript</p>
+                <p class='badge badge-light'>Python</p>
+                <p class='badge badge-light'>HTML</p>
+                <p class='badge badge-light'>CSS</p>
+                <p class='badge badge-light'>pandas</p>
+                <p class='badge badge-light'>Jupyter Notebook</p>
+                <p class='badge badge-light'>D3.js</p>
+                <p class='badge badge-light'>Bootstrap</p>
+                <p class='badge badge-light'>Node.js</p>
+              </div>
+            </div>
+        </div>
+
+        <!-- Project highlights and relevant coursework -->
+        <div class='col-12 col-md-4 p-0 p-md-2'>
+          <div class='card card-block'>
+            <h3 class='card-header'>Project Highlights</h3>
+            <div class='card-body'>
+                <h5>Panic at the Kernel OS</h5>
+                <p>In this project, my team and I built our own operating system in 3 months using x86 Assembly and C.
+                  I played a major role as the team leader and I also implemented interrupt support, all filesystem system
+                  calls, context switching and paging. 
+                  <br>
+                  <a href='projects.html#os-panic-at-the-kernel'>Read more about it here!</a>
+                </p>
+    
+                <h5>Crazy Taxi (FPGA Version)</h5>
+                <p> 
+                  In this project, my team member and I recreated one of our favorite childhood games, Crazy Taxi,
+                  for the FPGA. You’ll need a VGA monitor and a USB keyboard to play our multiplayer masterpiece, 
+                  but don’t worry if you don’t have access to these devices. I have pictures! 
+                  <br>
+                  <a href='projects.html#fpga-crazy-taxi'>Learn more about this project here!</a>
+                </p>
+            </div>
+          </div>
+          
+          <div class='card card-block'>
+            <h3 class='card-header'>Relevant Coursework</h3>
+            <div class='card-body'>
+              <p class='badge badge-light'>Data Structures</p>
+              <p class='badge badge-light'>Data Visualization</p>
+              <p class='badge badge-light'>Computer Systems Engineering</p>
+              <p class='badge badge-light'>Digital Systems Laboratory</p>
+              <p class='badge badge-light'>Front-End Web UI Frameworks and Tools (Coursera)</p>
+              <p class='badge badge-light'>Discrete Structures</p>
+              <p class='badge badge-light'>Linear Algebra</p>
+              <p class='badge badge-light'>Computer Systems & Programming</p>
+              <p class='badge badge-light'>Introduction to Computing</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
     </div>
     
   </div>

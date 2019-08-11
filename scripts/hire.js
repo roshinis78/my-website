@@ -42,6 +42,7 @@ $(function() {
   });
 
   $("#start-game-button").on("click", function() {
-    alert("This feature is in the making! Please come back next week for updates!")
+    $("#character-select-menu").css("display", "none");
+    $("#profile").css("display", "block");
   });
 });

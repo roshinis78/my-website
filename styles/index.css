@@ -95,6 +95,12 @@ header {
   overflow-y: scroll;
 }
 
+.btn-dismiss {
+  background: none;
+  color: white;
+  border-color: white; 
+}
+
 .logo {
   max-width: 200px;
   max-height: 200px;

@@ -1,11 +1,6 @@
 body {
-    background-color: skyblue;
-    color: white;
-}
-
-.gameplay {
-    margin-top: 100px;
-    margin-bottom: 2rem;
+    background-color: hsla(191, 61%, 69%,1);
+    color: black;
 }
 
 #character-select-menu {
@@ -57,15 +52,40 @@ body {
     }
 }
 
-/* Map styles */
-.map {
+/* Profile styles */
+#profile {
     display: none;
-    max-width: 70%;
-    height: 400px;
-    overflow-x: scroll;
-    overflow-y: hidden;
 }
 
-.map img {
-    max-width: 1000px;
+.block {
+    background: rgba(255, 255, 255, 0.308);
+
+    margin: 0.5rem 0rem;
+    padding: 1rem;
+    border-radius: 0.25rem;
+}
+
+.card-block {
+    background: rgba(255, 255, 255, 0.308);
+
+    margin: 0.5rem 0rem;
+    border-width: 0;
+}
+
+.block a, .card-block a {
+    text-decoration: none;
+}
+
+.block img {
+    width: 100%;
+
+    border-color: white;
+    border-width: 0.25rem;
+    border-style: solid;
+}
+
+@media (max-width: 992px){
+    #profile-content {
+        flex-direction: column;
+    }
 }

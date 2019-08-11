@@ -66,3 +66,51 @@ footer {
   color: #de7e00;
   background-color: #fff
 }
+
+/* Similar to bootstrap social but for goodreads */
+.btn-goodreads {
+  color: #4a3525;
+  background-color: #f4f2e9;
+  border-color: rgba(0, 0, 0, 0.2)
+}
+
+.btn-goodreads:focus, .btn-goodreads.focus {
+  color: #4a3525;
+  background-color: #e2e0d6;
+  border-color: rgba(0, 0, 0, 0.2)
+}
+
+.btn-goodreads:hover {
+  color: #4a3525;
+  background-color: #e2e0d6;
+  border-color: rgba(0, 0, 0, 0.2)
+}
+
+.btn-goodreads:active, .btn-goodreads.active, .open>.dropdown-toggle.btn-goodreads {
+  color: #4a3525;
+  background-color: #e2e0d6;
+  border-color: rgba(0, 0, 0, 0.2)
+}
+
+
+.btn-goodreads:active:hover, .btn-goodreads.active:hover, .open>.dropdown-toggle.btn-goodreads:hover, .btn-goodreads:active:focus, .btn-goodreads.active:focus, .open>.dropdown-toggle.btn-goodreads:focus, .btn-goodreads:active.focus, .btn-goodreads.active.focus, .open>.dropdown-toggle.btn-goodreads.focus {
+  color: #4a3525;
+  background-color: #e2e0d6;
+  border-color: rgba(0, 0, 0, 0.2)
+}
+
+.btn-goodreads:active, .btn-goodreads.active, .open>.dropdown-toggle.btn-goodreads {
+  background-image: none
+}
+
+.btn-goodreads.disabled:hover, .btn-goodreads[disabled]:hover, fieldset[disabled] .btn-goodreads:hover, .btn-goodreads.disabled:focus, .btn-goodreads[disabled]:focus, fieldset[disabled] .btn-goodreads:focus, .btn-goodreads.disabled.focus, .btn-goodreads[disabled].focus, fieldset[disabled] .btn-goodreads.focus {
+  background-color: #f4f2e9;
+  border-color: rgba(0, 0, 0, 0.2)
+}
+
+.btn-goodreads .badge {
+  color: #f4f2e9;
+  background-color: #fff
+}
+
+
