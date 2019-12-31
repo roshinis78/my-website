@@ -1,4 +1,5 @@
 import React from "react";
+import "bootstrap/dist/css/bootstrap.css"
 
 class Bubbles extends React.Component {
   render() {
@@ -21,7 +22,7 @@ class Bubbles extends React.Component {
       bubbles.push(<img alt="Watercolor bubble painted by Roshini" key={"bubble" + i} className="bubble" src={src} style={style}></img>);
     }
 
-    return <div>{bubbles}</div>;
+    return <div className="fixed-top" style={{zIndex: 10}}>{bubbles}</div>;
   }
 }
 

@@ -90,7 +90,7 @@ class Slide extends React.Component {
       );
     } else if (name === "Nav") {
       slideContent = (
-        <Navigation navItems={content["Nav"]["content"]}></Navigation>
+        <Navigation navItems={content["Nav"]["content"]} next={this.next}></Navigation>
       );
     } else if (content[name]["text"] !== undefined) {
       slideContent = <h1>{content[name]["text"]}</h1>;
@@ -122,8 +122,8 @@ class Slide extends React.Component {
         {this.bubbles}
         <div
           className="d-flex flex-column justify-content-center align-items-center p-3"
-          style={{ position: "relative", zIndex: 20, minHeight: "100vh" }}
-          onClick={this.next}
+          style={{ position: "relative", zIndex: 30, minHeight: "100vh" }}
+          onClick={(content[this.state.name]["next"] != null)? (this.next) : null}
         >
           {slideContent}
           {content[this.state.name]["next"] != null && (
@@ -177,7 +177,7 @@ class LinkedText extends React.Component {
           <h2 key={uuidv4()}>
             {element.text}
             <br className="d-inline d-lg-none" />
-            <a href={element.link}>{element.linkText}</a>
+            <a href={element.link} target="_blank" rel="noopener noreferrer">{element.linkText}</a>
           </h2>
         ))}
       </div>
