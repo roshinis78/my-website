@@ -1,0 +1,157 @@
+{
+    "toss": {
+        "text": "Hello",
+        "last": null,
+        "next": "hook"
+    },
+    "hook": {
+        "text": "I'm glad you're here",
+        "last": "toss",
+        "next": "line"
+    },
+    "line": {
+        "text": "My name is Roshini Saravankumar!",
+        "last": "hook",
+        "next": "sinker"
+    },
+    "sinker": {
+        "text": "Consider this a digital introduction 😄",
+        "last": "line",
+        "next": "Nav"
+    },
+    "Nav": {
+        "last": "sinker",
+        "next": null,
+        "content": [
+            "About",
+            "Projects",
+            "Work",
+            "Hobbies"
+        ]
+    },
+    "About": {
+        "last": "Nav",
+        "next": null,
+        "aboutQuote": {
+            "quote": "'Don’t get attached to any words. They are only stepping stones, to be left behind as quickly as possible.'",
+            "footer": "Eckhart Tolle, The Power of Now"
+        },
+        "aboutSections": [
+            {
+                "sectionKey": "about-me",
+                "badges": false,
+                "header": "Roshini Saravanakumar",
+                "body": [
+                    "Creative Mind & Life-long Learner",
+                    "Hobbies include: Gardening, Meditation, Painting, Yoga, Reading"
+                ]
+            },
+            {
+                "sectionKey": "about-currently",
+                "badges": false,
+                "header": "Currently",
+                "body": [
+                    "📚 Reading Into the Magic Shop by James R. Doty MD",
+                    "🏃‍♀️ Training for a 5k in April"
+                ]
+            },
+            {
+                "sectionKey": "about-school",
+                "badges": false,
+                "header": "University of Illinois at Urbana-Champaign",
+                "body": [
+                    "Junior in Computer Engineering (2021)",
+                    "James Scholar Honors Program",
+                    "Technical GPA: 3.93"
+                ]
+            },
+            {
+                "sectionKey": "about-courses",
+                "badges": true,
+                "header": "Relevant Coursework",
+                "body": [
+                    "Database Systems",
+                    "Data Structures",
+                    "Algorithms",
+                    "Operating Systems",
+                    "Data Science"
+                ]
+            },
+            {
+                "sectionKey": "about-skills",
+                "badges": true,
+                "header": "Awesome Skills",
+                "body": [
+                    "Full Stack Web Development",
+                    "Organizational Leadership",
+                    "Data Science & Visualization"
+                ]
+            },
+            {
+                "sectionKey": "about-honors",
+                "badges": false,
+                "header": "Honors",
+                "body": [
+                    "🏅 Frank C. Mock Scholarship (2019)",
+                    "🏅 John Deere Foundation Scholarship (2018)",
+                    "🏅 Dean's List (5 consecutive semesters)"
+                ]
+            }
+        ]
+    },
+    "Projects": {
+        "last": "Nav",
+        "next": null,
+        "content": [
+            {
+                "text": "Full Stack Web Developer",
+                "linkText": " @ Illini Foodies",
+                "link": "https://illinifoodies.xyz"
+            },
+            {
+                "text": "Visualization, Analytics & Development Lead",
+                "linkText": " @ XS Consumer",
+                "link": "https://xsconsumer.net"
+            },
+            {
+                "text": "Creator & Mastermind",
+                "linkText": " @ My Personal Website",
+                "link": "https://roshinis78.github.io/my-website"
+            }
+        ]
+    },
+    "Work": {
+        "last": "Nav",
+        "next": null,
+        "content": [
+            {
+                "text": "Remote Sensing Data Science Intern",
+                "linkText": " @ Corteva Agriscience",
+                "link": "https://www.corteva.com/"
+            },
+            {
+                "text": "Undergraduate Assistant",
+                "linkText": " @ UIUC Operating Systems Course",
+                "link": "https://courses.illinois.edu/schedule/2020/spring/ECE/391"
+            }
+        ]
+    },
+    "Hobbies": {
+        "last": "Nav",
+        "next": null,
+        "content": [
+            {
+                "text": "Digital & Traditional Art"
+            },
+            {
+                "text": "Indoor Gardening"
+            },
+            {
+                "text": "Meditation, Yoga"
+            },
+            {
+                "text": "Reading"
+            }
+        ]
+    }
+}
