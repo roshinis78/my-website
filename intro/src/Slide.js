@@ -78,6 +78,7 @@ class Slide extends React.Component {
           <div className="custom-card about-description">
             {content["About"]["aboutSections"].map((section, index) => (
               <Section
+                key={uuidv4()}
                 className={index === 0 ? "d-none d-lg-block" : ""}
                 sectionKey={section.key}
                 badges={section.badges}
@@ -101,7 +102,7 @@ class Slide extends React.Component {
     }
 
     return (
-      <div className={this.state.nightMode ? "dark" : "light"}>
+      <div className={this.state.nightMode ? "dark fixed-top" : "light fixed-top"}>
         <div className="navbar w-100 fixed-top">
           <div className="navbar-nav mr-auto navbar-expand">
             <IconButton
