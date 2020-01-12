@@ -3,6 +3,8 @@ import Bubbles from "./Bubbles.js";
 import "@fortawesome/fontawesome-free/css/all.css";
 import IconButton from "@material-ui/core/IconButton";
 
+import $ from "jquery";
+
 const uuidv4 = require("uuid/v4");
 const content = require("./data/contents.json");
 
@@ -15,6 +17,7 @@ class Slide extends React.Component {
 
     this.back = this.back.bind(this);
     this.next = this.next.bind(this);
+    this.toMenu = this.toMenu.bind(this);
 
     this.toggleNightMode = this.toggleNightMode.bind(this);
   }
@@ -41,6 +44,13 @@ class Slide extends React.Component {
       if (next != null) {
         this.setState({ name: next });
       }
+    }
+  }
+
+  toMenu(event) {
+    let isNotContent = $(event.target).parents(".content").length === 0;
+    if(this.state.name !== "Nav" && isNotContent) {
+      this.setState({name: "Nav"});
     }
   }
 
@@ -91,7 +101,10 @@ class Slide extends React.Component {
       );
     } else if (name === "Nav") {
       slideContent = (
-        <Navigation navItems={content["Nav"]["content"]} next={this.next}></Navigation>
+        <Navigation
+          navItems={content["Nav"]["content"]}
+          next={this.next}
+        ></Navigation>
       );
     } else if (content[name]["text"] !== undefined) {
       slideContent = <h1>{content[name]["text"]}</h1>;
@@ -102,13 +115,11 @@ class Slide extends React.Component {
     }
 
     return (
-      <div className={this.state.nightMode ? "dark fixed-top" : "light fixed-top"}>
-        <div className="navbar w-100 fixed-top">
-          <div className="navbar-nav mr-auto navbar-expand">
-            <IconButton
-              color="inherit"
-              onClick={this.back}
-            >
+      <div
+        className={this.state.nightMode ? "dark fixed-top" : "light fixed-top"}
+      >
+        <div style={{position: "fixed", top: "1%", left: "1%", zIndex: 40}}>
+            <IconButton color="inherit" onClick={this.back}>
               <i className="fas fa-reply"></i>
             </IconButton>
 
@@ -117,19 +128,23 @@ class Slide extends React.Component {
                 className={this.state.nightMode ? "fas fa-moon" : "far fa-moon"}
               ></i>
             </IconButton>
-          </div>
         </div>
 
         {this.bubbles}
         <div
+          id="slide"
           className="d-flex flex-column justify-content-center align-items-center p-3"
           style={{ position: "relative", zIndex: 30, minHeight: "100vh" }}
-          onClick={(content[this.state.name]["next"] != null)? (this.next) : null}
+          onClick={
+            content[this.state.name]["next"] != null ? this.next : this.toMenu
+          }
         >
-          {slideContent}
-          {content[this.state.name]["next"] != null && (
-            <i>tap here to continue</i>
-          )}
+
+          <div className="content">
+            {slideContent}
+          </div>
+          
+          {content[this.state.name]["next"] != null && <i>tap to continue</i>}
         </div>
       </div>
     );
@@ -178,7 +193,9 @@ class LinkedText extends React.Component {
           <h2 key={uuidv4()}>
             {element.text}
             <br className="d-inline d-lg-none" />
-            <a href={element.link} target="_blank" rel="noopener noreferrer">{element.linkText}</a>
+            <a href={element.link} target="_blank" rel="noopener noreferrer">
+              {element.linkText}
+            </a>
           </h2>
         ))}
       </div>
