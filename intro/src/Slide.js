@@ -18,7 +18,6 @@ class Slide extends React.Component {
     this.back = this.back.bind(this);
     this.next = this.next.bind(this);
     this.toMenu = this.toMenu.bind(this);
-
     this.toggleNightMode = this.toggleNightMode.bind(this);
   }
 
@@ -49,8 +48,8 @@ class Slide extends React.Component {
 
   toMenu(event) {
     let isNotContent = $(event.target).parents(".content").length === 0;
-    if(this.state.name !== "Nav" && isNotContent) {
-      this.setState({name: "Nav"});
+    if (this.state.name !== "Nav" && isNotContent) {
+      this.setState({ name: "Nav" });
     }
   }
 
@@ -76,26 +75,46 @@ class Slide extends React.Component {
 
               <div className="custom-card about-quote">
                 <blockquote>
-                  {content["About"]["aboutQuote"]["quote"]}
+                'Don’t get attached to any words. They are only stepping stones, to be left behind as quickly as possible.'
                 </blockquote>
                 <footer>
-                  &mdash; {content["About"]["aboutQuote"]["footer"]}
+                  &mdash; Eckhart Tolle, The Power of Now
                 </footer>
               </div>
             </div>
           </div>
 
           <div className="custom-card about-description">
-            {content["About"]["aboutSections"].map((section, index) => (
-              <Section
-                key={uuidv4()}
-                className={index === 0 ? "d-none d-lg-block" : ""}
-                sectionKey={section.key}
-                badges={section.badges}
-                header={section.header}
-                body={section.body}
-              ></Section>
-            ))}
+            <Section
+              className="d-none d-lg-block"
+              header="Roshini Saravanakumar"
+              content={<p>Creative Mind and Life-long Learner</p>} />
+            <Section 
+              header="Updates" 
+              content={<Summary p={[
+                <span>📚 Reading <Link text="If the Oceans Were Ink by Carla Power" link="https://www.goodreads.com/book/show/22320455-if-the-oceans-were-ink"/></span>,
+                <span>😎 Interned with <Link text="Cloud Engineering @ The Climate Corp" link="https://climate.com/"/> this summer!</span>,
+                <span>🚣🏾‍♀️ <Link text="Lyft OSS Cartography" link="https://github.com/lyft/cartography"/> Contributor/Maintainer</span>
+              ]}/>}/>
+            <Section 
+              header="University of Illinois at Urbana-Champaign"
+              content={<Summary p={[
+                <span>B.S. Computer Engineering (May 2021)</span>,
+                <span>GPA: 3.83</span>
+              ]}/>}
+            />
+            <Section 
+              header="Relevant Coursework"
+              content={<Badges badges={["Distributed Systems", "Communication Networks", "Computer Security", "Database Systems", "Operating Systems", "Applied Parallel Programming", "Data Structures & Algorithms", "Data Science"]}/>}
+            />
+            <Section
+              header="Honors"
+              content={<Summary p={[
+                <span>🏅 James Scholar Honors Student (2017-2020)</span>,
+                <span>🏅 Frank C. Mock Scholarship (2019)</span>,
+                <span>🏅 John Deere Foundation Scholarship (2018)</span>
+              ]}/>}
+            />
           </div>
         </div>
       );
@@ -118,16 +137,16 @@ class Slide extends React.Component {
       <div
         className={this.state.nightMode ? "dark fixed-top" : "light fixed-top"}
       >
-        <div style={{position: "fixed", top: "1%", left: "1%", zIndex: 40}}>
-            <IconButton color="inherit" onClick={this.back}>
-              <i className="fas fa-reply"></i>
-            </IconButton>
+        <div style={{ position: "fixed", top: "1%", left: "1%", zIndex: 40 }}>
+          <IconButton color="inherit" onClick={this.back}>
+            <i className="fas fa-reply"></i>
+          </IconButton>
 
-            <IconButton color="inherit" onClick={this.toggleNightMode}>
-              <i
-                className={this.state.nightMode ? "fas fa-moon" : "far fa-moon"}
-              ></i>
-            </IconButton>
+          <IconButton color="inherit" onClick={this.toggleNightMode}>
+            <i
+              className={this.state.nightMode ? "fas fa-moon" : "far fa-moon"}
+            ></i>
+          </IconButton>
         </div>
 
         {this.bubbles}
@@ -143,9 +162,40 @@ class Slide extends React.Component {
           <div className="content">
             {slideContent}
           </div>
-          
+
           {content[this.state.name]["next"] != null && <i>tap to continue</i>}
         </div>
+      </div>
+    );
+  }
+}
+
+class Badges extends React.Component {
+  render() {
+    return (
+      <div style={{ display: "flex", flexWrap: "wrap" }}>
+        {this.props.badges.map(badge =>
+          <span key={uuidv4()} className="custom-badge">
+            {badge}
+          </span>)}
+      </div>
+    )
+  }
+}
+
+class Link extends React.Component {
+  render() {
+    return (
+      <a href={this.props.link} target="_blank" rel="noopener noreferrer">{this.props.text}</a>
+    );
+  }
+}
+
+class Summary extends React.Component {
+  render() {
+    return (
+      <div>
+        {this.props.p.map(p => <p className="mb-0">{p}</p>)}
       </div>
     );
   }
@@ -154,32 +204,12 @@ class Slide extends React.Component {
 class Section extends React.Component {
   render() {
     return (
-      <div key={this.props.sectionKey} className={this.props.className}>
+      <div key={uuidv4()} className={this.props.className ? this.props.className : "mb-4"}>
         <p className="mb-0">
           <strong>{this.props.header}</strong>
         </p>
 
-        <div
-          style={this.props.badges ? { display: "flex", flexWrap: "wrap" } : {}}
-        >
-          {this.props.body.map(element => {
-            if (this.props.badges) {
-              return (
-                <span key={uuidv4()} className="custom-badge">
-                  {element}
-                </span>
-              );
-            } else {
-              return (
-                <p key={uuidv4()} className="mb-0">
-                  {element}
-                </p>
-              );
-            }
-          })}
-        </div>
-
-        <br />
+        {this.props.content}
       </div>
     );
   }
